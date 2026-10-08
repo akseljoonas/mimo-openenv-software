@@ -16,7 +16,9 @@
       "factor": "rollout_wall_s",
       "value": 600,
       "task_count": 8,
-      "hypothesis": "A shorter rollout limit may increase completed optimizer steps within four hours; reject as harmful if it mainly causes truncation or removes successful repairs."
+      "hypothesis": "A shorter rollout limit may increase completed optimizer steps within four hours; reject as harmful if it mainly causes truncation or removes successful repairs.",
+      "priority": "deprioritized_pending_full_baseline",
+      "priority_reason": "First seven completed groups reached selection in 59\u2013224 seconds, below both the 600-second candidate and 1200-second control limit. Reassess if later groups approach the limit."
     },
     {
       "id": "rollout-2400",
@@ -26,7 +28,9 @@
       "factor": "rollout_wall_s",
       "value": 2400,
       "task_count": 8,
-      "hypothesis": "A longer rollout limit may recover successful repairs lost to the baseline wall limit; deprioritize if baseline episodes finish well below 1200 seconds."
+      "hypothesis": "A longer rollout limit may recover successful repairs lost to the baseline wall limit; deprioritize if baseline episodes finish well below 1200 seconds.",
+      "priority": "deprioritized_pending_full_baseline",
+      "priority_reason": "First seven completed groups reached selection in 59\u2013224 seconds, below both the 600-second candidate and 1200-second control limit. Reassess if later groups approach the limit."
     },
     {
       "id": "completion-16k",
@@ -81,6 +85,12 @@
       "decision": "Wait for baseline metrics and private evaluation before choosing a candidate; quota is still occupied.",
       "evidence": "evidence/training-status.json",
       "limits": "Trackio read timeout; no training reward or leaderboard improvement claim."
+    },
+    {
+      "observed_at": "2026-10-08T16:16:00.103443+00:00",
+      "decision": "Provisionally deprioritize both wall-time variants; no candidate selected or submitted. Continue baseline monitoring and wait for private evaluation.",
+      "evidence": "experiments/observations/2026-10-08T161600Z.json",
+      "limits": "Group event intervals include orchestration and do not reveal per-task reward, loss, tokens or termination reason. Trackio timed out; no success-rate, learning-signal or benchmark improvement claim."
     }
   ]
 }

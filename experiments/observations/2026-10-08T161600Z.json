@@ -1,0 +1,92 @@
+{
+  "observed_at": "2026-10-08T16:16:00.103443+00:00",
+  "baseline_repository_revision": "a3516db3cddf59134e0a13f829ee7378ab0f9c84",
+  "submission_id": "mimo-software-v2-20261008",
+  "run_id": "03bfc81de59cf3e53b9e05d0",
+  "state": "rolling",
+  "policy_version": 7,
+  "simulated": false,
+  "run_error": null,
+  "current_group_retries": 0,
+  "slot": {
+    "state": "used",
+    "window_ends_at": 1791560954.6035028
+  },
+  "trackio": {
+    "identity": {
+      "project": "akseljoonas",
+      "run": "03bfc81de59cf3e53b9e05d0",
+      "run_id": "03bfc81de59cf3e53b9e05d0"
+    },
+    "dashboard": "https://openenvarena-training.hf.space/?project=akseljoonas&runs=03bfc81de59cf3e53b9e05d0",
+    "summary": {
+      "error": "ReadTimeout"
+    }
+  },
+  "evaluation": null,
+  "leaderboard_entry_present": false,
+  "completed_group_timings": [
+    {
+      "epoch": 0,
+      "start_event_id": 7349,
+      "selection_event_id": 7377,
+      "checkpoint_event_id": 7402,
+      "start_to_selection_seconds": 59.152,
+      "selection_to_checkpoint_seconds": 78.24
+    },
+    {
+      "epoch": 1,
+      "start_event_id": 7405,
+      "selection_event_id": 7443,
+      "checkpoint_event_id": 7476,
+      "start_to_selection_seconds": 79.854,
+      "selection_to_checkpoint_seconds": 56.534
+    },
+    {
+      "epoch": 2,
+      "start_event_id": 7484,
+      "selection_event_id": 7531,
+      "checkpoint_event_id": 7552,
+      "start_to_selection_seconds": 84.495,
+      "selection_to_checkpoint_seconds": 41.217
+    },
+    {
+      "epoch": 3,
+      "start_event_id": 7556,
+      "selection_event_id": 7687,
+      "checkpoint_event_id": 7758,
+      "start_to_selection_seconds": 223.88,
+      "selection_to_checkpoint_seconds": 124.277
+    },
+    {
+      "epoch": 4,
+      "start_event_id": 7767,
+      "selection_event_id": 7829,
+      "checkpoint_event_id": 7930,
+      "start_to_selection_seconds": 107.749,
+      "selection_to_checkpoint_seconds": 185.058
+    },
+    {
+      "epoch": 5,
+      "start_event_id": 7933,
+      "selection_event_id": 7973,
+      "checkpoint_event_id": 8016,
+      "start_to_selection_seconds": 60.592,
+      "selection_to_checkpoint_seconds": 63.397
+    },
+    {
+      "epoch": 6,
+      "start_event_id": 8019,
+      "selection_event_id": 8071,
+      "checkpoint_event_id": 8128,
+      "start_to_selection_seconds": 86.557,
+      "selection_to_checkpoint_seconds": 104.047
+    }
+  ],
+  "sources": {
+    "events": "https://openenvarena-arena.hf.space/api/openenv/runs/03bfc81de59cf3e53b9e05d0/events",
+    "dashboard": "https://openenvarena-training.hf.space/?project=akseljoonas&runs=03bfc81de59cf3e53b9e05d0"
+  },
+  "interpretation": "The first seven groups reached selection in 59.152 to 223.880 seconds. Neither a 600-second nor a 2400-second rollout cap is supported as a useful change by these observations. Provisionally deprioritize both wall-time variants; recheck the full baseline before a final choice.",
+  "limits": "Group event intervals include orchestration and do not reveal per-task reward, loss, tokens or termination reason. Trackio timed out; no success-rate, learning-signal or benchmark improvement claim."
+}
