@@ -1,6 +1,6 @@
 {
-  "status": "ready_for_retry_approval",
-  "submitted": false,
+  "status": "validated",
+  "submitted": true,
   "adapter_revision": "a2ab08e869901476efc007bca071d77b24600dee",
   "ci_url": "https://github.com/akseljoonas/mimo-openenv-software/actions/runs/37801207304",
   "ci_images_passed": 8,
@@ -15,7 +15,7 @@
   "compressed_unique_bytes": 4726225141,
   "largest_image_compressed_bytes": 673585280,
   "submission_sha256": "5445ddac73d5c7b09ca1f6071eb1a1a76de4df2e50b1e0b8256350257b88bac1",
-  "limits": "Arena admission, training and evaluation have not run. Reference-solution reward 1 was tested on the Django task; all eight tasks were tested unsolved and for reset, terminal stability and verifier identity.",
+  "limits": "Real Arena admission passed all 38 checks. GPU training has started; private evaluation has not yet been observed. Positive reference repair coverage remains the Django task; all eight have negative, reset and verifier-identity checks.",
   "previous_attempt": {
     "http_status": 422,
     "code": "ENVIRONMENT_TOO_LARGE_FOR_SANDBOX",
@@ -23,5 +23,9 @@
     "request_sha256": "f06b4162b1cd33e726dbb0ab08d80d458594ed9711f932cae59b8575e09fb2f5"
   },
   "corrected_field": "tasks[].workspace_gib: 44 -> 10 (documented default)",
-  "measured_largest_post_verification_writable_layer_bytes": 179490816
+  "measured_largest_post_verification_writable_layer_bytes": 179490816,
+  "run_id": "03bfc81de59cf3e53b9e05d0",
+  "dashboard": "https://openenvarena-training.hf.space/?project=akseljoonas&runs=03bfc81de59cf3e53b9e05d0",
+  "accepted_dataset_revision": "4ce4fe143d71ca6365bd187e96efa15bd7ab2787",
+  "admission_checks_passed": 38
 }

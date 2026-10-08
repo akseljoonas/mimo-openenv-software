@@ -1,0 +1,194 @@
+{
+  "submission_id": "mimo-b01-python-only",
+  "name": "MiMo ablation: Python task subset",
+  "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:96760cae0905496e9ddffc1fd3aaf431c861406bfba497c4205c0cf4cd3ff368",
+  "schema": {
+    "action": {
+      "additionalProperties": false,
+      "properties": {
+        "metadata": {
+          "additionalProperties": true,
+          "description": "Additional metadata for the action",
+          "title": "Metadata",
+          "type": "object"
+        },
+        "operation": {
+          "description": "Run a bash command or finish and grade the repository.",
+          "enum": [
+            "shell",
+            "finish"
+          ],
+          "title": "Operation",
+          "type": "string"
+        },
+        "command": {
+          "default": "",
+          "description": "Bash command; each call starts in the task repository.",
+          "maxLength": 16000,
+          "title": "Command",
+          "type": "string"
+        }
+      },
+      "required": [
+        "operation"
+      ],
+      "title": "ShellAction",
+      "type": "object"
+    },
+    "observation": {
+      "additionalProperties": false,
+      "properties": {
+        "done": {
+          "default": false,
+          "description": "Whether the episode has terminated",
+          "title": "Done",
+          "type": "boolean"
+        },
+        "reward": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Reward signal from the last action",
+          "title": "Reward"
+        },
+        "metadata": {
+          "additionalProperties": true,
+          "description": "Additional metadata for the observation",
+          "title": "Metadata",
+          "type": "object"
+        },
+        "task_id": {
+          "title": "Task Id",
+          "type": "string"
+        },
+        "output": {
+          "maxLength": 16000,
+          "title": "Output",
+          "type": "string"
+        },
+        "exit_code": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Exit Code"
+        }
+      },
+      "required": [
+        "task_id",
+        "output"
+      ],
+      "title": "ShellObservation",
+      "type": "object"
+    }
+  },
+  "tasks": [
+    {
+      "task_id": "format-code-task-001661",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:96760cae0905496e9ddffc1fd3aaf431c861406bfba497c4205c0cf4cd3ff368",
+      "split": "train",
+      "reset_wall_s": 180,
+      "rollout_wall_s": 1200,
+      "verifier_wall_s": 120,
+      "tool_wall_s": 120,
+      "tool_calls_total": 64,
+      "tool_calls_per_minute": 60,
+      "completion_tokens": 32768,
+      "context_tokens": 32768,
+      "memory_gib": 16,
+      "cpu_floor_vcpus": 2,
+      "workspace_gib": 10
+    },
+    {
+      "task_id": "format-code-task-000932",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:09e8e1ee42db0c7b02a9c68b4902c9bbae583c204e9df0480168273d8bb8998c",
+      "split": "train",
+      "reset_wall_s": 180,
+      "rollout_wall_s": 1200,
+      "verifier_wall_s": 120,
+      "tool_wall_s": 120,
+      "tool_calls_total": 64,
+      "tool_calls_per_minute": 60,
+      "completion_tokens": 32768,
+      "context_tokens": 32768,
+      "memory_gib": 16,
+      "cpu_floor_vcpus": 2,
+      "workspace_gib": 10
+    },
+    {
+      "task_id": "format-code-task-000636",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:7d1fffff2ee327aa4ca45f582dea2d35b632b51bbc8677842dd9e60a7cbb7f80",
+      "split": "train",
+      "reset_wall_s": 180,
+      "rollout_wall_s": 1200,
+      "verifier_wall_s": 120,
+      "tool_wall_s": 120,
+      "tool_calls_total": 64,
+      "tool_calls_per_minute": 60,
+      "completion_tokens": 32768,
+      "context_tokens": 32768,
+      "memory_gib": 16,
+      "cpu_floor_vcpus": 2,
+      "workspace_gib": 10
+    },
+    {
+      "task_id": "format-code-task-000666",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:84c3bc69e1a6a8201fe1608f3cfec971ceba212e5de2ed7b3c77ac45332cb848",
+      "split": "train",
+      "reset_wall_s": 180,
+      "rollout_wall_s": 1200,
+      "verifier_wall_s": 120,
+      "tool_wall_s": 120,
+      "tool_calls_total": 64,
+      "tool_calls_per_minute": 60,
+      "completion_tokens": 32768,
+      "context_tokens": 32768,
+      "memory_gib": 16,
+      "cpu_floor_vcpus": 2,
+      "workspace_gib": 10
+    },
+    {
+      "task_id": "format-code-task-002105",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:02080aee535e56d1daaf58598baa0ae7dc965570c0a3db9845561e0fa6194d98",
+      "split": "train",
+      "reset_wall_s": 180,
+      "rollout_wall_s": 1200,
+      "verifier_wall_s": 120,
+      "tool_wall_s": 120,
+      "tool_calls_total": 64,
+      "tool_calls_per_minute": 60,
+      "completion_tokens": 32768,
+      "context_tokens": 32768,
+      "memory_gib": 16,
+      "cpu_floor_vcpus": 2,
+      "workspace_gib": 10
+    }
+  ],
+  "example_actions": [
+    {
+      "operation": "finish"
+    }
+  ],
+  "finish_action": {
+    "operation": "finish"
+  },
+  "dataset": "akseljoonas/mimo-openenv-software",
+  "source": "https://github.com/akseljoonas/mimo-openenv-software/tree/a2ab08e869901476efc007bca071d77b24600dee"
+}

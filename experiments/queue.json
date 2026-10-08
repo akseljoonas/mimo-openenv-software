@@ -1,0 +1,86 @@
+{
+  "batch": "01",
+  "baseline_submission_id": "mimo-software-v2-20261008",
+  "baseline_run_id": "03bfc81de59cf3e53b9e05d0",
+  "baseline_request_sha256": "5445ddac73d5c7b09ca1f6071eb1a1a76de4df2e50b1e0b8256350257b88bac1",
+  "adapter_revision": "a2ab08e869901476efc007bca071d77b24600dee",
+  "baseline_dataset_revision": "4ce4fe143d71ca6365bd187e96efa15bd7ab2787",
+  "selection_policy": "Review baseline Trackio curves and completed private evaluation before choosing the next candidate. Run one accepted submission per rolling 24-hour slot. Keep all task records, image digests, action schema and original binary reward fixed. Record decisions and results; do not treat candidate order as an automatic ranking. Revise or skip candidates made uninformative by observed data. Prepare the next batch from measured outcomes.",
+  "next_slot_utc": "2026-10-09T15:49:14.603503+00:00",
+  "candidates": [
+    {
+      "id": "rollout-600",
+      "status": "prepared_not_submitted",
+      "request": "experiments/batch-01/rollout-600.json",
+      "request_sha256": "1c8d4a04cfc0f2d03f73a238e5d9f98bc7776155e80d4370488f008196122eaf",
+      "factor": "rollout_wall_s",
+      "value": 600,
+      "task_count": 8,
+      "hypothesis": "A shorter rollout limit may increase completed optimizer steps within four hours; reject as harmful if it mainly causes truncation or removes successful repairs."
+    },
+    {
+      "id": "rollout-2400",
+      "status": "prepared_not_submitted",
+      "request": "experiments/batch-01/rollout-2400.json",
+      "request_sha256": "d73e16f649a9de523b220b2ae3fbec5c16546ffee170bc8b08fae927e8dda605",
+      "factor": "rollout_wall_s",
+      "value": 2400,
+      "task_count": 8,
+      "hypothesis": "A longer rollout limit may recover successful repairs lost to the baseline wall limit; deprioritize if baseline episodes finish well below 1200 seconds."
+    },
+    {
+      "id": "completion-16k",
+      "status": "prepared_not_submitted",
+      "request": "experiments/batch-01/completion-16k.json",
+      "request_sha256": "70c771ca8a3a753dc9f977791533e32cf303f9c5a8de59e8ee87b9bfaf33c921",
+      "factor": "completion_tokens",
+      "value": 16384,
+      "task_count": 8,
+      "hypothesis": "A smaller completion-plus-observation budget may improve throughput; measure reward, clipping, optimizer steps and private scores together."
+    },
+    {
+      "id": "python-only",
+      "status": "prepared_not_submitted",
+      "request": "experiments/batch-01/python-only.json",
+      "request_sha256": "fa1e6dd354f08e47257b90fd31a2de4dc9e377afa026637507056322295858cb",
+      "factor": "subset",
+      "value": [
+        "001661",
+        "000932",
+        "000636",
+        "000666",
+        "002105"
+      ],
+      "task_count": 5,
+      "hypothesis": "Concentrating on the five Python repositories may produce a more consistent repair curriculum; exposure frequency and task mix change together."
+    },
+    {
+      "id": "javascript-only",
+      "status": "prepared_not_submitted",
+      "request": "experiments/batch-01/javascript-only.json",
+      "request_sha256": "af90de4429fb135d11cb9645df37b43bcc405d59ee142cbee329c8683af73dbc",
+      "factor": "subset",
+      "value": [
+        "001457",
+        "002658",
+        "001547"
+      ],
+      "task_count": 3,
+      "hypothesis": "Concentrating on the three JavaScript repositories may produce more repeated useful repair updates; exposure frequency and task mix change together."
+    }
+  ],
+  "monitoring": {
+    "automation_id": "mimo-arena-experiments",
+    "interval_minutes": 15,
+    "status": "ACTIVE",
+    "initial_observation": "evidence/training-status.json"
+  },
+  "decisions": [
+    {
+      "observed_at": "2026-10-08T15:58:47.117435+00:00",
+      "decision": "Wait for baseline metrics and private evaluation before choosing a candidate; quota is still occupied.",
+      "evidence": "evidence/training-status.json",
+      "limits": "Trackio read timeout; no training reward or leaderboard improvement claim."
+    }
+  ]
+}

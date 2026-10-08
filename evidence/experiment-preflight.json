@@ -1,0 +1,16 @@
+{
+  "checks": [
+    "transport_failure_is_not_a_zero_metric_and_does_not_expose_exception_text",
+    "HTTP_error_is_preserved_and_token_is_redacted",
+    "Trackio_error_envelope_preserved_and_calls_are_anonymous",
+    "returned_dashboard_identity_and_actual_metric_inventory_drive_reads",
+    "request_validated:rollout-600",
+    "request_validated:rollout-2400",
+    "request_validated:completion-16k",
+    "request_validated:python-only",
+    "request_validated:javascript-only",
+    "live_Arena_read_records_two_updates_and_missing_Trackio_as_unavailable"
+  ],
+  "passed": true,
+  "limits": "Request differences and monitor error handling validated. Reuses all eight previously admitted images; no new GPU ablation or private evaluation has run. Trackio live API was unavailable; successful curve parsing was checked with a fixture, not claimed as a live read."
+}

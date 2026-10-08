@@ -1,0 +1,383 @@
+{
+  "submission_id": "mimo-software-v2-20261008",
+  "owner": "space:akseljoonas",
+  "state": "validated",
+  "simulated": false,
+  "error_code": null,
+  "error_origin": null,
+  "report": {
+    "passed": true,
+    "admissible": true,
+    "level": "isolated",
+    "policy_version": "posttrain-infra-image-v1",
+    "submission_digest": "a9055edf772844fd3085884094c6e7f45c72ff638c9b2de9e9bc97203f1f7eb8",
+    "errors": [],
+    "error_details": [],
+    "checks": [
+      {
+        "name": "image_resolved",
+        "status": "pass"
+      },
+      {
+        "name": "image_resolved",
+        "status": "pass"
+      },
+      {
+        "name": "image_resolved",
+        "status": "pass"
+      },
+      {
+        "name": "image_resolved",
+        "status": "pass"
+      },
+      {
+        "name": "image_resolved",
+        "status": "pass"
+      },
+      {
+        "name": "image_resolved",
+        "status": "pass"
+      },
+      {
+        "name": "image_resolved",
+        "status": "pass"
+      },
+      {
+        "name": "image_resolved",
+        "status": "pass"
+      },
+      {
+        "name": "image_sizes",
+        "status": "pass"
+      },
+      {
+        "name": "typed_contract",
+        "status": "pass"
+      },
+      {
+        "name": "unique_tasks",
+        "status": "pass"
+      },
+      {
+        "name": "training_tasks",
+        "status": "pass"
+      },
+      {
+        "name": "openenv_schema",
+        "status": "pass"
+      },
+      {
+        "name": "pinned_openenv_endpoint",
+        "status": "pass",
+        "task_id": "format-code-task-001457",
+        "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:239ef0403c4b1a80acb6f3e62ca2b719e03beb3b98b0a3b0a4e594d952d5124d"
+      },
+      {
+        "name": "native_schema",
+        "status": "pass",
+        "task_id": "format-code-task-001457",
+        "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:239ef0403c4b1a80acb6f3e62ca2b719e03beb3b98b0a3b0a4e594d952d5124d"
+      },
+      {
+        "name": "native_episode",
+        "status": "pass",
+        "task_id": "format-code-task-001457",
+        "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:239ef0403c4b1a80acb6f3e62ca2b719e03beb3b98b0a3b0a4e594d952d5124d"
+      },
+      {
+        "name": "pinned_openenv_endpoint",
+        "status": "pass",
+        "task_id": "format-code-task-001661",
+        "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:96760cae0905496e9ddffc1fd3aaf431c861406bfba497c4205c0cf4cd3ff368"
+      },
+      {
+        "name": "native_schema",
+        "status": "pass",
+        "task_id": "format-code-task-001661",
+        "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:96760cae0905496e9ddffc1fd3aaf431c861406bfba497c4205c0cf4cd3ff368"
+      },
+      {
+        "name": "native_episode",
+        "status": "pass",
+        "task_id": "format-code-task-001661",
+        "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:96760cae0905496e9ddffc1fd3aaf431c861406bfba497c4205c0cf4cd3ff368"
+      },
+      {
+        "name": "pinned_openenv_endpoint",
+        "status": "pass",
+        "task_id": "format-code-task-002658",
+        "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:b59dc8525594fa96fde3212a5f604fab2514b9283dd031e696a08963c7a18264"
+      },
+      {
+        "name": "native_schema",
+        "status": "pass",
+        "task_id": "format-code-task-002658",
+        "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:b59dc8525594fa96fde3212a5f604fab2514b9283dd031e696a08963c7a18264"
+      },
+      {
+        "name": "native_episode",
+        "status": "pass",
+        "task_id": "format-code-task-002658",
+        "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:b59dc8525594fa96fde3212a5f604fab2514b9283dd031e696a08963c7a18264"
+      },
+      {
+        "name": "pinned_openenv_endpoint",
+        "status": "pass",
+        "task_id": "format-code-task-001547",
+        "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:7ddd93f2767f08f4952bc84957a24f814598cd38c3a65a4e6f9c0c00f1897022"
+      },
+      {
+        "name": "native_schema",
+        "status": "pass",
+        "task_id": "format-code-task-001547",
+        "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:7ddd93f2767f08f4952bc84957a24f814598cd38c3a65a4e6f9c0c00f1897022"
+      },
+      {
+        "name": "native_episode",
+        "status": "pass",
+        "task_id": "format-code-task-001547",
+        "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:7ddd93f2767f08f4952bc84957a24f814598cd38c3a65a4e6f9c0c00f1897022"
+      },
+      {
+        "name": "pinned_openenv_endpoint",
+        "status": "pass",
+        "task_id": "format-code-task-000932",
+        "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:09e8e1ee42db0c7b02a9c68b4902c9bbae583c204e9df0480168273d8bb8998c"
+      },
+      {
+        "name": "native_schema",
+        "status": "pass",
+        "task_id": "format-code-task-000932",
+        "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:09e8e1ee42db0c7b02a9c68b4902c9bbae583c204e9df0480168273d8bb8998c"
+      },
+      {
+        "name": "native_episode",
+        "status": "pass",
+        "task_id": "format-code-task-000932",
+        "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:09e8e1ee42db0c7b02a9c68b4902c9bbae583c204e9df0480168273d8bb8998c"
+      },
+      {
+        "name": "pinned_openenv_endpoint",
+        "status": "pass",
+        "task_id": "format-code-task-000636",
+        "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:7d1fffff2ee327aa4ca45f582dea2d35b632b51bbc8677842dd9e60a7cbb7f80"
+      },
+      {
+        "name": "native_schema",
+        "status": "pass",
+        "task_id": "format-code-task-000636",
+        "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:7d1fffff2ee327aa4ca45f582dea2d35b632b51bbc8677842dd9e60a7cbb7f80"
+      },
+      {
+        "name": "native_episode",
+        "status": "pass",
+        "task_id": "format-code-task-000636",
+        "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:7d1fffff2ee327aa4ca45f582dea2d35b632b51bbc8677842dd9e60a7cbb7f80"
+      },
+      {
+        "name": "pinned_openenv_endpoint",
+        "status": "pass",
+        "task_id": "format-code-task-000666",
+        "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:84c3bc69e1a6a8201fe1608f3cfec971ceba212e5de2ed7b3c77ac45332cb848"
+      },
+      {
+        "name": "native_schema",
+        "status": "pass",
+        "task_id": "format-code-task-000666",
+        "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:84c3bc69e1a6a8201fe1608f3cfec971ceba212e5de2ed7b3c77ac45332cb848"
+      },
+      {
+        "name": "native_episode",
+        "status": "pass",
+        "task_id": "format-code-task-000666",
+        "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:84c3bc69e1a6a8201fe1608f3cfec971ceba212e5de2ed7b3c77ac45332cb848"
+      },
+      {
+        "name": "pinned_openenv_endpoint",
+        "status": "pass",
+        "task_id": "format-code-task-002105",
+        "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:02080aee535e56d1daaf58598baa0ae7dc965570c0a3db9845561e0fa6194d98"
+      },
+      {
+        "name": "native_schema",
+        "status": "pass",
+        "task_id": "format-code-task-002105",
+        "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:02080aee535e56d1daaf58598baa0ae7dc965570c0a3db9845561e0fa6194d98"
+      },
+      {
+        "name": "native_episode",
+        "status": "pass",
+        "task_id": "format-code-task-002105",
+        "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:02080aee535e56d1daaf58598baa0ae7dc965570c0a3db9845561e0fa6194d98"
+      },
+      {
+        "name": "hf_remote_accounting",
+        "status": "pass"
+      }
+    ]
+  },
+  "admission": {
+    "queued_at": 1791474554.6031115,
+    "deadline": 1791478395.305869,
+    "budget_s": 3840,
+    "cleanup_complete": true,
+    "attempts": 0,
+    "retry_at": null,
+    "last_error": null
+  },
+  "run": {
+    "run_id": "03bfc81de59cf3e53b9e05d0",
+    "queued_at": 1791474588.524398,
+    "error": null,
+    "simulated": false,
+    "dashboard": "https://openenvarena-training.hf.space/?project=akseljoonas&runs=03bfc81de59cf3e53b9e05d0"
+  },
+  "slot": {
+    "state": "used",
+    "window_ends_at": 1791560954.6035028
+  },
+  "images": [
+    {
+      "submitted": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:239ef0403c4b1a80acb6f3e62ca2b719e03beb3b98b0a3b0a4e594d952d5124d",
+      "resolved": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:239ef0403c4b1a80acb6f3e62ca2b719e03beb3b98b0a3b0a4e594d952d5124d",
+      "platform": "linux/amd64",
+      "index_digest": null,
+      "stored_bytes": 625320638,
+      "tasks": [
+        "format-code-task-001457"
+      ],
+      "claimed": {
+        "source": "https://github.com/akseljoonas/mimo-openenv-software"
+      },
+      "provenance": "unverified",
+      "compatibility": "passed"
+    },
+    {
+      "submitted": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:96760cae0905496e9ddffc1fd3aaf431c861406bfba497c4205c0cf4cd3ff368",
+      "resolved": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:96760cae0905496e9ddffc1fd3aaf431c861406bfba497c4205c0cf4cd3ff368",
+      "platform": "linux/amd64",
+      "index_digest": null,
+      "stored_bytes": 551548338,
+      "tasks": [
+        "format-code-task-001661"
+      ],
+      "claimed": {
+        "source": "https://github.com/akseljoonas/mimo-openenv-software"
+      },
+      "provenance": "unverified",
+      "compatibility": "passed"
+    },
+    {
+      "submitted": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:b59dc8525594fa96fde3212a5f604fab2514b9283dd031e696a08963c7a18264",
+      "resolved": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:b59dc8525594fa96fde3212a5f604fab2514b9283dd031e696a08963c7a18264",
+      "platform": "linux/amd64",
+      "index_digest": null,
+      "stored_bytes": 589200399,
+      "tasks": [
+        "format-code-task-002658"
+      ],
+      "claimed": {
+        "source": "https://github.com/akseljoonas/mimo-openenv-software"
+      },
+      "provenance": "unverified",
+      "compatibility": "passed"
+    },
+    {
+      "submitted": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:7ddd93f2767f08f4952bc84957a24f814598cd38c3a65a4e6f9c0c00f1897022",
+      "resolved": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:7ddd93f2767f08f4952bc84957a24f814598cd38c3a65a4e6f9c0c00f1897022",
+      "platform": "linux/amd64",
+      "index_digest": null,
+      "stored_bytes": 583397847,
+      "tasks": [
+        "format-code-task-001547"
+      ],
+      "claimed": {
+        "source": "https://github.com/akseljoonas/mimo-openenv-software"
+      },
+      "provenance": "unverified",
+      "compatibility": "passed"
+    },
+    {
+      "submitted": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:09e8e1ee42db0c7b02a9c68b4902c9bbae583c204e9df0480168273d8bb8998c",
+      "resolved": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:09e8e1ee42db0c7b02a9c68b4902c9bbae583c204e9df0480168273d8bb8998c",
+      "platform": "linux/amd64",
+      "index_digest": null,
+      "stored_bytes": 673590127,
+      "tasks": [
+        "format-code-task-000932"
+      ],
+      "claimed": {
+        "source": "https://github.com/akseljoonas/mimo-openenv-software"
+      },
+      "provenance": "unverified",
+      "compatibility": "passed"
+    },
+    {
+      "submitted": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:7d1fffff2ee327aa4ca45f582dea2d35b632b51bbc8677842dd9e60a7cbb7f80",
+      "resolved": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:7d1fffff2ee327aa4ca45f582dea2d35b632b51bbc8677842dd9e60a7cbb7f80",
+      "platform": "linux/amd64",
+      "index_digest": null,
+      "stored_bytes": 542256764,
+      "tasks": [
+        "format-code-task-000636"
+      ],
+      "claimed": {
+        "source": "https://github.com/akseljoonas/mimo-openenv-software"
+      },
+      "provenance": "unverified",
+      "compatibility": "passed"
+    },
+    {
+      "submitted": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:84c3bc69e1a6a8201fe1608f3cfec971ceba212e5de2ed7b3c77ac45332cb848",
+      "resolved": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:84c3bc69e1a6a8201fe1608f3cfec971ceba212e5de2ed7b3c77ac45332cb848",
+      "platform": "linux/amd64",
+      "index_digest": null,
+      "stored_bytes": 574857915,
+      "tasks": [
+        "format-code-task-000666"
+      ],
+      "claimed": {
+        "source": "https://github.com/akseljoonas/mimo-openenv-software"
+      },
+      "provenance": "unverified",
+      "compatibility": "passed"
+    },
+    {
+      "submitted": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:02080aee535e56d1daaf58598baa0ae7dc965570c0a3db9845561e0fa6194d98",
+      "resolved": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:02080aee535e56d1daaf58598baa0ae7dc965570c0a3db9845561e0fa6194d98",
+      "platform": "linux/amd64",
+      "index_digest": null,
+      "stored_bytes": 586092107,
+      "tasks": [
+        "format-code-task-002105"
+      ],
+      "claimed": {
+        "source": "https://github.com/akseljoonas/mimo-openenv-software"
+      },
+      "provenance": "unverified",
+      "compatibility": "passed"
+    }
+  ],
+  "source": {
+    "claimed": "https://github.com/akseljoonas/mimo-openenv-software/tree/a2ab08e869901476efc007bca071d77b24600dee",
+    "verified": false
+  },
+  "dataset": {
+    "repo": "akseljoonas/mimo-openenv-software",
+    "revision": "4ce4fe143d71ca6365bd187e96efa15bd7ab2787",
+    "url": "https://huggingface.co/datasets/akseljoonas/mimo-openenv-software/tree/4ce4fe143d71ca6365bd187e96efa15bd7ab2787"
+  },
+  "environment_size": {
+    "measurement": "compressed_bytes_declared_by_registry_manifests",
+    "stored_bytes": 4726264135,
+    "unique": {
+      "images": 8,
+      "layers": 48,
+      "distinct_layers": 41,
+      "shared_layers": 1,
+      "stored_bytes": 4726263911,
+      "saved_bytes": 224
+    }
+  },
+  "evaluation": null
+}
