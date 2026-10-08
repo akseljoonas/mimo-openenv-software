@@ -1,0 +1,69 @@
+{
+  "purpose": "Measured reset plus original unsolved verification before reducing the requested workspace allocation",
+  "tasks": [
+    {
+      "reward": 0.0,
+      "done": true,
+      "workspace_du": "179208192\t/testbed",
+      "task_id": "format-code-task-001457",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:239ef0403c4b1a80acb6f3e62ca2b719e03beb3b98b0a3b0a4e594d952d5124d",
+      "writable_layer_bytes": 179490816
+    },
+    {
+      "reward": 0.0,
+      "done": true,
+      "workspace_du": "466944\t/workspace/repo",
+      "task_id": "format-code-task-001661",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:96760cae0905496e9ddffc1fd3aaf431c861406bfba497c4205c0cf4cd3ff368",
+      "writable_layer_bytes": 520192
+    },
+    {
+      "reward": 0.0,
+      "done": true,
+      "workspace_du": "146542592\t/testbed",
+      "task_id": "format-code-task-002658",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:b59dc8525594fa96fde3212a5f604fab2514b9283dd031e696a08963c7a18264",
+      "writable_layer_bytes": 146599936
+    },
+    {
+      "reward": 0.0,
+      "done": true,
+      "workspace_du": "133541888\t/testbed",
+      "task_id": "format-code-task-001547",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:7ddd93f2767f08f4952bc84957a24f814598cd38c3a65a4e6f9c0c00f1897022",
+      "writable_layer_bytes": 133988352
+    },
+    {
+      "reward": 0.0,
+      "done": true,
+      "workspace_du": "41791488\t/testbed",
+      "task_id": "format-code-task-000932",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:09e8e1ee42db0c7b02a9c68b4902c9bbae583c204e9df0480168273d8bb8998c",
+      "writable_layer_bytes": 41840640
+    },
+    {
+      "reward": 0.0,
+      "done": true,
+      "workspace_du": "3588096\t/testbed",
+      "task_id": "format-code-task-000636",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:7d1fffff2ee327aa4ca45f582dea2d35b632b51bbc8677842dd9e60a7cbb7f80",
+      "writable_layer_bytes": 3633152
+    },
+    {
+      "reward": 0.0,
+      "done": true,
+      "workspace_du": "7180288\t/workspace/repo",
+      "task_id": "format-code-task-000666",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:84c3bc69e1a6a8201fe1608f3cfec971ceba212e5de2ed7b3c77ac45332cb848",
+      "writable_layer_bytes": 7249920
+    },
+    {
+      "reward": 0.0,
+      "done": true,
+      "workspace_du": "10383360\t/workspace/repo",
+      "task_id": "format-code-task-002105",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:02080aee535e56d1daaf58598baa0ae7dc965570c0a3db9845561e0fa6194d98",
+      "writable_layer_bytes": 10485760
+    }
+  ]
+}

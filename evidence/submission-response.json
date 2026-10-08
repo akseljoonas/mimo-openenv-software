@@ -1,0 +1,7 @@
+{
+  "http_status": 422,
+  "response": {
+    "error": "format-code-task-001457: compressed image plus workspace and headroom exceeds the 50 GiB sandbox disk",
+    "code": "ENVIRONMENT_TOO_LARGE_FOR_SANDBOX"
+  }
+}

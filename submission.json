@@ -114,7 +114,7 @@
       "context_tokens": 32768,
       "memory_gib": 16,
       "cpu_floor_vcpus": 2,
-      "workspace_gib": 44
+      "workspace_gib": 10
     },
     {
       "task_id": "format-code-task-001661",
@@ -130,7 +130,7 @@
       "context_tokens": 32768,
       "memory_gib": 16,
       "cpu_floor_vcpus": 2,
-      "workspace_gib": 44
+      "workspace_gib": 10
     },
     {
       "task_id": "format-code-task-002658",
@@ -146,7 +146,7 @@
       "context_tokens": 32768,
       "memory_gib": 16,
       "cpu_floor_vcpus": 2,
-      "workspace_gib": 44
+      "workspace_gib": 10
     },
     {
       "task_id": "format-code-task-001547",
@@ -162,7 +162,7 @@
       "context_tokens": 32768,
       "memory_gib": 16,
       "cpu_floor_vcpus": 2,
-      "workspace_gib": 44
+      "workspace_gib": 10
     },
     {
       "task_id": "format-code-task-000932",
@@ -178,7 +178,7 @@
       "context_tokens": 32768,
       "memory_gib": 16,
       "cpu_floor_vcpus": 2,
-      "workspace_gib": 44
+      "workspace_gib": 10
     },
     {
       "task_id": "format-code-task-000636",
@@ -194,7 +194,7 @@
       "context_tokens": 32768,
       "memory_gib": 16,
       "cpu_floor_vcpus": 2,
-      "workspace_gib": 44
+      "workspace_gib": 10
     },
     {
       "task_id": "format-code-task-000666",
@@ -210,7 +210,7 @@
       "context_tokens": 32768,
       "memory_gib": 16,
       "cpu_floor_vcpus": 2,
-      "workspace_gib": 44
+      "workspace_gib": 10
     },
     {
       "task_id": "format-code-task-002105",
@@ -226,7 +226,7 @@
       "context_tokens": 32768,
       "memory_gib": 16,
       "cpu_floor_vcpus": 2,
-      "workspace_gib": 44
+      "workspace_gib": 10
     }
   ],
   "example_actions": [
