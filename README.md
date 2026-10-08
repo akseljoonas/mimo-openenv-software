@@ -57,6 +57,10 @@ python verify.py IMAGE TASK_ID --output evidence/TASK_ID.json
 
 The `Publish images` GitHub workflow builds, tests and publishes the selected images with short-lived GitHub Actions registry authentication. No Hugging Face token is included in this repository or its artifacts. Arena submission requires a separate human approval and is not triggered by the build workflow.
 
+The prepared Arena request allows 180 seconds for reset, 1,200 seconds for rollout and 120 seconds for verification, with 64 tool calls and a 32,768-token context. These Arena budgets constrain the unchanged upstream verifier, whose internal timeout remains 1,800 seconds.
+
 ## Status
 
-The initial eight images passed local endpoint and episode checks, with a Django reference repair scoring 1. Revision v2 addresses a verifier privilege issue found in final review; rebuild and regression verification are in progress. Do not submit v1 images. No Arena submission or training run has been started.
+All eight v2 images passed [native Linux CI](https://github.com/akseljoonas/mimo-openenv-software/actions/runs/37801207304), anonymous pulls and real WebSocket episode replays. All tasks terminate at reward 0 when unsolved; the Django reference repair scores 1 and resets back to 0. The tests also cover reset isolation, stable terminal rewards, identical schemas and unprivileged verifier Git hooks. The largest image is 674 MB compressed; shared layers total 4.73 GB.
+
+The exact digest-pinned request is in `submission.json`; `evidence/preflight.json` summarizes validation and its limits. It is ready for human approval. No Arena submission or training run has been started. V1 images were superseded by the verifier privilege fix and should not be submitted.

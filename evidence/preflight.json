@@ -1,0 +1,19 @@
+{
+  "status": "ready_for_human_approval",
+  "submitted": false,
+  "adapter_revision": "a2ab08e869901476efc007bca071d77b24600dee",
+  "ci_url": "https://github.com/akseljoonas/mimo-openenv-software/actions/runs/37801207304",
+  "ci_images_passed": 8,
+  "anonymous_pull_and_episode_replays_passed": 8,
+  "schema_identical_across_images": true,
+  "positive_reference_task": "format-code-task-001661",
+  "reference_rewards": [
+    0,
+    1,
+    0
+  ],
+  "compressed_unique_bytes": 4726225141,
+  "largest_image_compressed_bytes": 673585280,
+  "submission_sha256": "f06b4162b1cd33e726dbb0ab08d80d458594ed9711f932cae59b8575e09fb2f5",
+  "limits": "Arena admission, training and evaluation have not run. Reference-solution reward 1 was tested on the Django task; all eight tasks were tested unsolved and for reset, terminal stability and verifier identity."
+}

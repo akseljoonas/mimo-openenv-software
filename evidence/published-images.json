@@ -1,0 +1,286 @@
+{
+  "images": [
+    {
+      "task_id": "format-code-task-001457",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:239ef0403c4b1a80acb6f3e62ca2b719e03beb3b98b0a3b0a4e594d952d5124d",
+      "tag": "format-code-task-001457-v2",
+      "compressed_bytes": 625315799,
+      "layers": 6,
+      "platform": "linux/amd64",
+      "anonymous_manifest_and_config_access": true,
+      "config": {
+        "User": "root",
+        "ExposedPorts": {
+          "8000/tcp": {}
+        },
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "PYTHONUNBUFFERED=1",
+          "ENABLE_WEB_INTERFACE=false"
+        ],
+        "Cmd": [
+          "/opt/arena-python/bin/python3",
+          "-m",
+          "uvicorn",
+          "server:app",
+          "--host",
+          "0.0.0.0",
+          "--port",
+          "8000"
+        ],
+        "WorkingDir": "/opt/arena",
+        "Labels": {
+          "org.opencontainers.image.source": "https://github.com/akseljoonas/mimo-openenv-software"
+        },
+        "ArgsEscaped": true
+      }
+    },
+    {
+      "task_id": "format-code-task-001661",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:96760cae0905496e9ddffc1fd3aaf431c861406bfba497c4205c0cf4cd3ff368",
+      "tag": "format-code-task-001661-v2",
+      "compressed_bytes": 551543495,
+      "layers": 6,
+      "platform": "linux/amd64",
+      "anonymous_manifest_and_config_access": true,
+      "config": {
+        "User": "root",
+        "ExposedPorts": {
+          "8000/tcp": {}
+        },
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "PYTHONUNBUFFERED=1",
+          "ENABLE_WEB_INTERFACE=false"
+        ],
+        "Cmd": [
+          "/opt/arena-python/bin/python3",
+          "-m",
+          "uvicorn",
+          "server:app",
+          "--host",
+          "0.0.0.0",
+          "--port",
+          "8000"
+        ],
+        "WorkingDir": "/opt/arena",
+        "Labels": {
+          "org.opencontainers.image.source": "https://github.com/akseljoonas/mimo-openenv-software"
+        },
+        "ArgsEscaped": true
+      }
+    },
+    {
+      "task_id": "format-code-task-002658",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:b59dc8525594fa96fde3212a5f604fab2514b9283dd031e696a08963c7a18264",
+      "tag": "format-code-task-002658-v2",
+      "compressed_bytes": 589195550,
+      "layers": 6,
+      "platform": "linux/amd64",
+      "anonymous_manifest_and_config_access": true,
+      "config": {
+        "User": "root",
+        "ExposedPorts": {
+          "8000/tcp": {}
+        },
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "PYTHONUNBUFFERED=1",
+          "ENABLE_WEB_INTERFACE=false"
+        ],
+        "Cmd": [
+          "/opt/arena-python/bin/python3",
+          "-m",
+          "uvicorn",
+          "server:app",
+          "--host",
+          "0.0.0.0",
+          "--port",
+          "8000"
+        ],
+        "WorkingDir": "/opt/arena",
+        "Labels": {
+          "org.opencontainers.image.source": "https://github.com/akseljoonas/mimo-openenv-software"
+        },
+        "ArgsEscaped": true
+      }
+    },
+    {
+      "task_id": "format-code-task-001547",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:7ddd93f2767f08f4952bc84957a24f814598cd38c3a65a4e6f9c0c00f1897022",
+      "tag": "format-code-task-001547-v2",
+      "compressed_bytes": 583392999,
+      "layers": 6,
+      "platform": "linux/amd64",
+      "anonymous_manifest_and_config_access": true,
+      "config": {
+        "User": "root",
+        "ExposedPorts": {
+          "8000/tcp": {}
+        },
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "PYTHONUNBUFFERED=1",
+          "ENABLE_WEB_INTERFACE=false"
+        ],
+        "Cmd": [
+          "/opt/arena-python/bin/python3",
+          "-m",
+          "uvicorn",
+          "server:app",
+          "--host",
+          "0.0.0.0",
+          "--port",
+          "8000"
+        ],
+        "WorkingDir": "/opt/arena",
+        "Labels": {
+          "org.opencontainers.image.source": "https://github.com/akseljoonas/mimo-openenv-software"
+        },
+        "ArgsEscaped": true
+      }
+    },
+    {
+      "task_id": "format-code-task-000932",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:09e8e1ee42db0c7b02a9c68b4902c9bbae583c204e9df0480168273d8bb8998c",
+      "tag": "format-code-task-000932-v2",
+      "compressed_bytes": 673585280,
+      "layers": 6,
+      "platform": "linux/amd64",
+      "anonymous_manifest_and_config_access": true,
+      "config": {
+        "User": "root",
+        "ExposedPorts": {
+          "8000/tcp": {}
+        },
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "PYTHONUNBUFFERED=1",
+          "ENABLE_WEB_INTERFACE=false"
+        ],
+        "Cmd": [
+          "/opt/arena-python/bin/python3",
+          "-m",
+          "uvicorn",
+          "server:app",
+          "--host",
+          "0.0.0.0",
+          "--port",
+          "8000"
+        ],
+        "WorkingDir": "/opt/arena",
+        "Labels": {
+          "org.opencontainers.image.source": "https://github.com/akseljoonas/mimo-openenv-software"
+        },
+        "ArgsEscaped": true
+      }
+    },
+    {
+      "task_id": "format-code-task-000636",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:7d1fffff2ee327aa4ca45f582dea2d35b632b51bbc8677842dd9e60a7cbb7f80",
+      "tag": "format-code-task-000636-v2",
+      "compressed_bytes": 542251916,
+      "layers": 6,
+      "platform": "linux/amd64",
+      "anonymous_manifest_and_config_access": true,
+      "config": {
+        "User": "root",
+        "ExposedPorts": {
+          "8000/tcp": {}
+        },
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "PYTHONUNBUFFERED=1",
+          "ENABLE_WEB_INTERFACE=false"
+        ],
+        "Cmd": [
+          "/opt/arena-python/bin/python3",
+          "-m",
+          "uvicorn",
+          "server:app",
+          "--host",
+          "0.0.0.0",
+          "--port",
+          "8000"
+        ],
+        "WorkingDir": "/opt/arena",
+        "Labels": {
+          "org.opencontainers.image.source": "https://github.com/akseljoonas/mimo-openenv-software"
+        },
+        "ArgsEscaped": true
+      }
+    },
+    {
+      "task_id": "format-code-task-000666",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:84c3bc69e1a6a8201fe1608f3cfec971ceba212e5de2ed7b3c77ac45332cb848",
+      "tag": "format-code-task-000666-v2",
+      "compressed_bytes": 574853067,
+      "layers": 6,
+      "platform": "linux/amd64",
+      "anonymous_manifest_and_config_access": true,
+      "config": {
+        "User": "root",
+        "ExposedPorts": {
+          "8000/tcp": {}
+        },
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "PYTHONUNBUFFERED=1",
+          "ENABLE_WEB_INTERFACE=false"
+        ],
+        "Cmd": [
+          "/opt/arena-python/bin/python3",
+          "-m",
+          "uvicorn",
+          "server:app",
+          "--host",
+          "0.0.0.0",
+          "--port",
+          "8000"
+        ],
+        "WorkingDir": "/opt/arena",
+        "Labels": {
+          "org.opencontainers.image.source": "https://github.com/akseljoonas/mimo-openenv-software"
+        },
+        "ArgsEscaped": true
+      }
+    },
+    {
+      "task_id": "format-code-task-002105",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:02080aee535e56d1daaf58598baa0ae7dc965570c0a3db9845561e0fa6194d98",
+      "tag": "format-code-task-002105-v2",
+      "compressed_bytes": 586087259,
+      "layers": 6,
+      "platform": "linux/amd64",
+      "anonymous_manifest_and_config_access": true,
+      "config": {
+        "User": "root",
+        "ExposedPorts": {
+          "8000/tcp": {}
+        },
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "PYTHONUNBUFFERED=1",
+          "ENABLE_WEB_INTERFACE=false"
+        ],
+        "Cmd": [
+          "/opt/arena-python/bin/python3",
+          "-m",
+          "uvicorn",
+          "server:app",
+          "--host",
+          "0.0.0.0",
+          "--port",
+          "8000"
+        ],
+        "WorkingDir": "/opt/arena",
+        "Labels": {
+          "org.opencontainers.image.source": "https://github.com/akseljoonas/mimo-openenv-software"
+        },
+        "ArgsEscaped": true
+      }
+    }
+  ],
+  "unique_compressed_bytes": 4726225141,
+  "pending": []
+}
