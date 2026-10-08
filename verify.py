@@ -3,6 +3,7 @@ import argparse
 import json
 from pathlib import Path
 import subprocess
+import shlex
 import time
 import uuid
 
@@ -74,6 +75,12 @@ try:
         shell("printf changed > .arena-reset-marker")
         call("reset", {"task_id": args.task_id})
         check("reset_removes_previous_edits", shell("test ! -e .arena-reset-marker")["observation"]["exit_code"] == 0)
+        probe = "sh -c 'id -u > /tmp/arena-git-hook-uid'"
+        shell("git config core.fsmonitor " + shlex.quote(probe))
+        call("step", {"operation": "finish"})
+        hook_uid = subprocess.check_output(["docker", "exec", name, "cat", "/tmp/arena-git-hook-uid"], text=True).strip()
+        check("verifier_git_hooks_are_unprivileged", hook_uid == "2000")
+        call("reset", {"task_id": args.task_id})
         if args.solution:
             script = args.solution.read_text()
             repaired = shell("python - <<'ARENA_REPAIR'\n" + script + "\nARENA_REPAIR")

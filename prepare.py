@@ -10,7 +10,7 @@ from server import VerifierExecution
 root = Path("/opt/arena")
 instance = json.loads((root / "instance.json").read_text())
 cwd = Path(instance["cwd"])
-env = OpenSourceCodeEnvironment(VerifierExecution(cwd=str(cwd)), instance)
+env = OpenSourceCodeEnvironment(VerifierExecution(cwd=str(cwd), privileged=True), instance)
 base = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=cwd, text=True).strip()
 if not env._strip_future_commits(base):
     raise RuntimeError("Upstream history stripping failed")

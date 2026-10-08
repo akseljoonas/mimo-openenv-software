@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      max-parallel: 2
+      max-parallel: 4
       matrix: ${{ fromJSON(needs.matrix.outputs.tasks) }}
     steps:
       - uses: actions/checkout@v4
@@ -39,14 +39,14 @@ jobs:
           TASK_ID: ${{ matrix.task_id }}
           TASK_IMAGE: ${{ matrix.source_image }}
           DOCKER_DEFAULT_PLATFORM: linux/amd64
-        run: openenv build -t "ghcr.io/akseljoonas/mimo-openenv-software:${TASK_ID}-v1" --build-arg "TASK_ID=$TASK_ID" --build-arg "TASK_IMAGE=$TASK_IMAGE"
+        run: openenv build -t "ghcr.io/akseljoonas/mimo-openenv-software:${TASK_ID}-v2" --build-arg "TASK_ID=$TASK_ID" --build-arg "TASK_IMAGE=$TASK_IMAGE"
       - name: Replay real episodes
         env:
           TASK_ID: ${{ matrix.task_id }}
         run: |
           solution=()
           if [[ "$TASK_ID" == format-code-task-001661 ]]; then solution=(--solution solutions/friendship.py); fi
-          python verify.py "ghcr.io/akseljoonas/mimo-openenv-software:${TASK_ID}-v1" "$TASK_ID" "${solution[@]}" --output "evidence/${TASK_ID}.json"
+          python verify.py "ghcr.io/akseljoonas/mimo-openenv-software:${TASK_ID}-v2" "$TASK_ID" "${solution[@]}" --output "evidence/${TASK_ID}.json"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -60,4 +60,4 @@ jobs:
       - name: Publish verified image
         env:
           TASK_ID: ${{ matrix.task_id }}
-        run: docker push "ghcr.io/akseljoonas/mimo-openenv-software:${TASK_ID}-v1"
+        run: docker push "ghcr.io/akseljoonas/mimo-openenv-software:${TASK_ID}-v2"

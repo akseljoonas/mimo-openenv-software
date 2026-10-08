@@ -1,5 +1,5 @@
 {
-  "image": "ghcr.io/akseljoonas/mimo-openenv-software:format-code-task-001661-v1",
+  "image": "ghcr.io/akseljoonas/mimo-openenv-software:format-code-task-001661-v2",
   "task_id": "format-code-task-001661",
   "checks": [
     "health_within_120_seconds",
@@ -10,6 +10,7 @@
     "unsolved_terminal_reward_zero",
     "terminal_reward_is_stable",
     "reset_removes_previous_edits",
+    "verifier_git_hooks_are_unprivileged",
     "reference_repair_applied_through_action",
     "reference_terminal_reward_one",
     "reset_restores_unsolved_task"
@@ -140,7 +141,7 @@
       "type": "object"
     }
   },
-  "openenv_validation": "Validation report for http://127.0.0.1:52328 (profile: openenv-http/1.x)\n  standard version: 1.0.0 \u00b7 mode: simulation\n  PASS  openapi_version_available\n  PASS  health_endpoint\n  PASS  metadata_endpoint\n  PASS  schema_endpoint\n  PASS  mcp_endpoint\n  PASS  mode_endpoint_consistency\nVerdict: PASS\n",
+  "openenv_validation": "Validation report for http://127.0.0.1:53725 (profile: openenv-http/1.x)\n  standard version: 1.0.0 \u00b7 mode: simulation\n  PASS  openapi_version_available\n  PASS  health_endpoint\n  PASS  metadata_endpoint\n  PASS  schema_endpoint\n  PASS  mcp_endpoint\n  PASS  mode_endpoint_consistency\nVerdict: PASS\n",
   "unsolved_result": {
     "observation": {
       "metadata": {},
@@ -162,5 +163,5 @@
     "done": true
   },
   "passed": true,
-  "container_logs": "INFO:     Started server process [1]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)\nINFO:     172.17.0.1:58010 - \"WebSocket /ws\" [accepted]\nINFO:     connection open\n"
+  "container_logs": "INFO:     Started server process [1]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)\nINFO:     172.17.0.1:60084 - \"WebSocket /ws\" [accepted]\nINFO:     connection open\n"
 }

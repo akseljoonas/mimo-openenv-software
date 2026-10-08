@@ -4,6 +4,7 @@ import json
 import os
 from pathlib import Path
 import shutil
+import shlex
 import signal
 import subprocess
 import tarfile
@@ -38,12 +39,23 @@ class ShellObservation(Observation):
 class VerifierExecution(LocalEnvironment):
     """Keep upstream verifier operations in the container, with bounded processes."""
 
+    def __init__(self, *, privileged=False, **kwargs):
+        super().__init__(**kwargs)
+        self.privileged = privileged
+
     def execute(self, command, cwd="", timeout=None):
         return run_command(command, cwd or str(WORKSPACE), timeout or 120,
-                           agent=command == INSTANCE["test_command"])
+                           agent=not self.privileged)
+
+    def copy_to(self, src_path, dest_path, **kwargs):
+        with open(src_path, "rb") as source:
+            result = run_command("cat > " + shlex.quote(dest_path), str(WORKSPACE),
+                                 120, agent=not self.privileged, stdin=source)
+        if result["returncode"] != 0:
+            raise RuntimeError("Verifier file transfer failed")
 
 
-def run_command(command, cwd, timeout, *, agent):
+def run_command(command, cwd, timeout, *, agent, stdin=None):
     env = dict(os.environ)
     env.pop("PYTHONPATH", None)
     if agent:
@@ -52,7 +64,7 @@ def run_command(command, cwd, timeout, *, agent):
     with tempfile.TemporaryFile() as output:
         proc = subprocess.Popen(
             ["/bin/bash", "-c", command], cwd=cwd, env=env,
-            stdout=output, stderr=subprocess.STDOUT, start_new_session=True,
+            stdin=stdin, stdout=output, stderr=subprocess.STDOUT, start_new_session=True,
             user=AGENT_UID if agent else None,
             group=AGENT_UID if agent else None,
             extra_groups=[] if agent else None,

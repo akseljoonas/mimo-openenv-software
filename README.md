@@ -8,6 +8,11 @@ tags:
   - software-engineering
 source_datasets:
   - XiaomiMiMo/MiMo-V2.6-RL-oss
+configs:
+  - config_name: default
+    data_files:
+      - split: train
+        path: tasks/*.json
 ---
 
 # MiMo software engineering for OpenEnv
@@ -22,9 +27,9 @@ Dataset: https://huggingface.co/datasets/akseljoonas/mimo-openenv-software
 
 ## Runtime contract
 
-Each task has a separate public `linux/amd64` image tagged `ghcr.io/akseljoonas/mimo-openenv-software:TASK_ID-v1`. The image starts its own OpenEnv server on port 8000 without mounted files, secrets or additional environment variables. Use an OpenEnv WebSocket session at `/ws`: `reset` accepts `task_id`; `step` accepts `{"operation":"shell","command":"..."}` or `{"operation":"finish"}`. Standalone HTTP `/reset` and `/step` are stateless in the pinned OpenEnv release.
+Each task has a separate public `linux/amd64` image tagged `ghcr.io/akseljoonas/mimo-openenv-software:TASK_ID-v2`. The image starts its own OpenEnv server on port 8000 without mounted files, secrets or additional environment variables. Use an OpenEnv WebSocket session at `/ws`: `reset` accepts `task_id`; `step` accepts `{"operation":"shell","command":"..."}` or `{"operation":"finish"}`. Standalone HTTP `/reset` and `/step` are stateless in the pinned OpenEnv release.
 
-Reset restores the repository snapshot. Shell actions start in the task's original working directory, run as UID 2000, last at most 60 seconds, and return at most 12,000 output bytes. `finish` invokes Xiaomi's original verifier and returns `done: true`; reaching 64 actions also grades. A terminal session returns its cached verdict until reset. Tests are installed only while grading. The grader test command also runs as UID 2000; the server and stored task record are inaccessible to that user. This is not a security boundary against every possible reward exploit in arbitrary upstream repositories.
+Reset restores the repository snapshot. Shell actions start in the task's original working directory, run as UID 2000, last at most 60 seconds, and return at most 12,000 output bytes. `finish` invokes Xiaomi's original verifier and returns `done: true`; reaching 64 actions also grades. A terminal session returns its cached verdict until reset. Tests are installed only while grading. All runtime verifier commands and patch writes also run as UID 2000; the server and stored task record are inaccessible to that user. This is not a security boundary against every possible reward exploit in arbitrary upstream repositories.
 
 Build preparation uses Xiaomi's existing Git-history stripping routine, then its setup assertion, before snapshotting the repository. This removes reachable future fixes present in some original images. Existing task files and grading code are not rewritten. The adapter has its own Python runtime so task dependencies remain intact.
 
@@ -43,7 +48,7 @@ Install the pinned OpenEnv CLI. For a row in `tasks.jsonl`:
 
 ```sh
 export DOCKER_DEFAULT_PLATFORM=linux/amd64
-openenv build -t ghcr.io/akseljoonas/mimo-openenv-software:TASK_ID-v1 \
+openenv build -t ghcr.io/akseljoonas/mimo-openenv-software:TASK_ID-v2 \
   --build-arg TASK_ID=TASK_ID --build-arg TASK_IMAGE=SOURCE_IMAGE_DIGEST
 python verify.py IMAGE TASK_ID --output evidence/TASK_ID.json
 ```
@@ -54,4 +59,4 @@ The `Publish images` GitHub workflow builds, tests and publishes the selected im
 
 ## Status
 
-Build and verification in progress. No Arena submission or training run has been started.
+The initial eight images passed local endpoint and episode checks, with a Django reference repair scoring 1. Revision v2 addresses a verifier privilege issue found in final review; rebuild and regression verification are in progress. Do not submit v1 images. No Arena submission or training run has been started.

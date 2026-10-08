@@ -1,0 +1,45 @@
+{
+  "dataset_revision": "639865fd3374018d6cb29b9fb82dd531406fcf5f",
+  "records": [
+    {
+      "task_id": "format-code-task-000636",
+      "unchanged": true,
+      "sha256": "4eb64932ee8bcbc46e7f6fb5355dbb986829d8e5a67c4ef3970667ebc7c793b0"
+    },
+    {
+      "task_id": "format-code-task-000666",
+      "unchanged": true,
+      "sha256": "b0c7534ea52eeffaa057ad8ad995f0fa4f75cc76eedf9080460a3fff02a9efc4"
+    },
+    {
+      "task_id": "format-code-task-000932",
+      "unchanged": true,
+      "sha256": "87270573d34c6ccee12bedf16f46840655ad351fbbe092c4833cc6bbaf3a56c0"
+    },
+    {
+      "task_id": "format-code-task-001457",
+      "unchanged": true,
+      "sha256": "ac06754253d5be509a2d4a593912dd06731db035c717813e7f7d2dd12d9553d4"
+    },
+    {
+      "task_id": "format-code-task-001547",
+      "unchanged": true,
+      "sha256": "7cf54d3ddd4d1e031675e8b8cbe5dfed1656e4aee27542277b24ae7af019f92e"
+    },
+    {
+      "task_id": "format-code-task-001661",
+      "unchanged": true,
+      "sha256": "d2433c2e98102a601db0e5ed8fd54a77a866749b3e42cc594a4a38f77df21808"
+    },
+    {
+      "task_id": "format-code-task-002105",
+      "unchanged": true,
+      "sha256": "08b2a4e44869b9bf7fb392c59956df940c9ed371d3a8b66289bb54144b27cf75"
+    },
+    {
+      "task_id": "format-code-task-002658",
+      "unchanged": true,
+      "sha256": "e9af1b41bb765151b0c4d14ced8ed18bf5827fcf7b07b24ebe4448b008feeeb1"
+    }
+  ]
+}
