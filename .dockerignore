@@ -1,0 +1,5 @@
+.git
+evidence
+solutions
+__pycache__
+*.tar.gz

@@ -1,0 +1,7 @@
+MiMo OpenEnv software adapter
+Copyright 2026 Aksel Joonas
+
+Task data adapted from XiaomiMiMo/MiMo-V2.6-RL-oss (Apache-2.0).
+MiMo-Agent grading code is installed from its pinned public source (MIT).
+OpenEnv is installed from its pinned public source (BSD-3-Clause).
+Repository code inside upstream Docker images retains its original licenses.

@@ -1,0 +1,125 @@
+{
+  "action": {
+    "additionalProperties": false,
+    "properties": {
+      "metadata": {
+        "additionalProperties": true,
+        "description": "Additional metadata for the action",
+        "title": "Metadata",
+        "type": "object"
+      },
+      "operation": {
+        "description": "Run a bash command or finish and grade the repository.",
+        "enum": [
+          "shell",
+          "finish"
+        ],
+        "title": "Operation",
+        "type": "string"
+      },
+      "command": {
+        "default": "",
+        "description": "Bash command; each call starts in the task repository.",
+        "maxLength": 16000,
+        "title": "Command",
+        "type": "string"
+      }
+    },
+    "required": [
+      "operation"
+    ],
+    "title": "ShellAction",
+    "type": "object"
+  },
+  "observation": {
+    "additionalProperties": false,
+    "properties": {
+      "done": {
+        "default": false,
+        "description": "Whether the episode has terminated",
+        "title": "Done",
+        "type": "boolean"
+      },
+      "reward": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "integer"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Reward signal from the last action",
+        "title": "Reward"
+      },
+      "metadata": {
+        "additionalProperties": true,
+        "description": "Additional metadata for the observation",
+        "title": "Metadata",
+        "type": "object"
+      },
+      "task_id": {
+        "title": "Task Id",
+        "type": "string"
+      },
+      "output": {
+        "maxLength": 16000,
+        "title": "Output",
+        "type": "string"
+      },
+      "exit_code": {
+        "anyOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Exit Code"
+      }
+    },
+    "required": [
+      "task_id",
+      "output"
+    ],
+    "title": "ShellObservation",
+    "type": "object"
+  },
+  "state": {
+    "additionalProperties": true,
+    "description": "Base class for environment state.\n\nRepresents internal environment state, separate from observations.",
+    "properties": {
+      "episode_id": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Unique identifier for the current episode",
+        "title": "Episode Id"
+      },
+      "step_count": {
+        "default": 0,
+        "description": "Number of steps taken in the current episode",
+        "minimum": 0,
+        "title": "Step Count",
+        "type": "integer"
+      }
+    },
+    "title": "State",
+    "type": "object"
+  }
+}

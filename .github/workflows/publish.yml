@@ -1,0 +1,63 @@
+name: Publish images
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  packages: write
+jobs:
+  matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      tasks: ${{ steps.tasks.outputs.tasks }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: tasks
+        run: |
+          python - <<'PY'
+          import json, os
+          rows = [json.loads(line) for line in open('tasks.jsonl')]
+          matrix = {'include': [{'task_id': r['task_id'], 'source_image': r['source_image']} for r in rows]}
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('tasks=' + json.dumps(matrix) + '\n')
+          PY
+  publish:
+    needs: matrix
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix: ${{ fromJSON(needs.matrix.outputs.tasks) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install test client
+        run: pip install 'openenv @ git+https://github.com/meta-pytorch/OpenEnv.git@86a180ede21e044f7929b9a7783ad83aa67d83a3' requests websockets
+      - name: Build pinned task image
+        env:
+          TASK_ID: ${{ matrix.task_id }}
+          TASK_IMAGE: ${{ matrix.source_image }}
+          DOCKER_DEFAULT_PLATFORM: linux/amd64
+        run: openenv build -t "ghcr.io/akseljoonas/mimo-openenv-software:${TASK_ID}-v1" --build-arg "TASK_ID=$TASK_ID" --build-arg "TASK_IMAGE=$TASK_IMAGE"
+      - name: Replay real episodes
+        env:
+          TASK_ID: ${{ matrix.task_id }}
+        run: |
+          solution=()
+          if [[ "$TASK_ID" == format-code-task-001661 ]]; then solution=(--solution solutions/friendship.py); fi
+          python verify.py "ghcr.io/akseljoonas/mimo-openenv-software:${TASK_ID}-v1" "$TASK_ID" "${solution[@]}" --output "evidence/${TASK_ID}.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: evidence-${{ matrix.task_id }}
+          path: evidence/${{ matrix.task_id }}.json
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish verified image
+        env:
+          TASK_ID: ${{ matrix.task_id }}
+        run: docker push "ghcr.io/akseljoonas/mimo-openenv-software:${TASK_ID}-v1"
