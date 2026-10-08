@@ -1,0 +1,93 @@
+{
+  "started_at": "2026-10-08T16:20:23.053604+00:00",
+  "finished_at": "2026-10-08T16:21:06.397936+00:00",
+  "parallel_workers": 4,
+  "images": 8,
+  "passed": true,
+  "results": [
+    {
+      "task_id": "format-code-task-001661",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:96760cae0905496e9ddffc1fd3aaf431c861406bfba497c4205c0cf4cd3ff368",
+      "started_at_unix": 1791476423.0538518,
+      "finished_at_unix": 1791476437.612761,
+      "exit_code": 0,
+      "checks_passed": 12,
+      "report_sha256": "ca931e8c678d2b9959a219442d59b89c9ce2c9ca2e319fa43c2049c665e96b52"
+    },
+    {
+      "task_id": "format-code-task-000932",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:09e8e1ee42db0c7b02a9c68b4902c9bbae583c204e9df0480168273d8bb8998c",
+      "started_at_unix": 1791476437.612989,
+      "finished_at_unix": 1791476449.691526,
+      "exit_code": 0,
+      "checks_passed": 9,
+      "report_sha256": "37fbcf28fca27a72a4794f79fbe940e198e377ecae3f074c0a88a1d4ac7b0571"
+    },
+    {
+      "task_id": "format-code-task-002658",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:b59dc8525594fa96fde3212a5f604fab2514b9283dd031e696a08963c7a18264",
+      "started_at_unix": 1791476423.053914,
+      "finished_at_unix": 1791476451.000031,
+      "exit_code": 0,
+      "checks_passed": 9,
+      "report_sha256": "25a03d6b56ad333a75bf86d852d202feeee4628733dfed0bc29941a28d44ee5f"
+    },
+    {
+      "task_id": "format-code-task-001547",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:7ddd93f2767f08f4952bc84957a24f814598cd38c3a65a4e6f9c0c00f1897022",
+      "started_at_unix": 1791476423.0539782,
+      "finished_at_unix": 1791476452.98937,
+      "exit_code": 0,
+      "checks_passed": 9,
+      "report_sha256": "a446bdc2b35af7e0d2a1d1118648d39e84e67549997be47c370302f17460384f"
+    },
+    {
+      "task_id": "format-code-task-001457",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:239ef0403c4b1a80acb6f3e62ca2b719e03beb3b98b0a3b0a4e594d952d5124d",
+      "started_at_unix": 1791476423.0537899,
+      "finished_at_unix": 1791476457.853315,
+      "exit_code": 0,
+      "checks_passed": 9,
+      "report_sha256": "8d5599d14fde7a00d031ed6dbbc8e876d984ed973268b05d7b9902a3391abec6"
+    },
+    {
+      "task_id": "format-code-task-000636",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:7d1fffff2ee327aa4ca45f582dea2d35b632b51bbc8677842dd9e60a7cbb7f80",
+      "started_at_unix": 1791476449.691724,
+      "finished_at_unix": 1791476460.099139,
+      "exit_code": 0,
+      "checks_passed": 9,
+      "report_sha256": "f955364a7ca9ac4ee017ccf3287e834ebe0284265adddb06e90f5a3d8fa7266c"
+    },
+    {
+      "task_id": "format-code-task-000666",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:84c3bc69e1a6a8201fe1608f3cfec971ceba212e5de2ed7b3c77ac45332cb848",
+      "started_at_unix": 1791476451.00014,
+      "finished_at_unix": 1791476461.618109,
+      "exit_code": 0,
+      "checks_passed": 9,
+      "report_sha256": "500634fe7329ef403335cbf1f63cdd872391fc6b4b1659245b4c2901e3a6f71d"
+    },
+    {
+      "task_id": "format-code-task-002105",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:02080aee535e56d1daaf58598baa0ae7dc965570c0a3db9845561e0fa6194d98",
+      "started_at_unix": 1791476452.9894688,
+      "finished_at_unix": 1791476466.397673,
+      "exit_code": 0,
+      "checks_passed": 9,
+      "report_sha256": "824651c96966be11a468e8a2e217ad2a78c8e917c2f5af776490a5f3c67ceb43"
+    }
+  ],
+  "scope": "Local Docker linux/amd64 emulation: OpenEnv protocol, negative rewards, reset isolation and verifier identity for eight images; Django reference reward 0 to 1 to 0. This is not GPU training, a policy benchmark or an ablation performance comparison.",
+  "source_revision": "6fcada9fbd6f39d39d571a21066e62a88a874429",
+  "checks_passed": 75,
+  "observed_peak_test_processes": 4,
+  "schema_identical_across_images": true,
+  "all_test_containers_cleaned_up": true,
+  "elapsed_seconds": 43.344,
+  "reference_rewards": [
+    0,
+    1,
+    0
+  ]
+}
