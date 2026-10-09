@@ -47,7 +47,9 @@ class TerminalBenchVerifier:
             # The original scripts address /app and /tests explicitly.
             result = self.execution.execute("bash /tests/test.sh", cwd="/", timeout=timeout)
             reward_file = logs / "reward.txt"
-            if result["returncode"] not in (0, 1) or not reward_file.is_file() or reward_file.is_symlink():
+            # Pytest collection errors (for example an agent's syntax error)
+            # are ordinary failed solutions when the original script writes 0.
+            if result["returncode"] not in range(6) or not reward_file.is_file() or reward_file.is_symlink():
                 raise RuntimeError("Original terminal verifier did not produce a valid verdict")
             value = reward_file.read_text().strip()
             if value not in ("0", "1"):

@@ -90,6 +90,18 @@ try:
             call("step", {"operation": "finish"})
             hook_uid = subprocess.check_output(["docker", "exec", name, "cat", "/tmp/arena-git-hook-uid"], text=True).strip()
             check("verifier_git_hooks_are_unprivileged", hook_uid == "2000")
+        else:
+            # Editable production modules from these public task contracts.
+            module = {
+                "candidate-2500-hardware-cad": "/app/vendor/openscad_parser/src/openscad_parser/ast/builder.py",
+                "candidate-2376-security-cryptography": "/app/vendor/authlib/authlib/jose/rfc7515/jws.py",
+                "candidate-0628-media-music": "/app/vendor/partitura/partitura/io/importmusicxml.py",
+            }[args.task_id]
+            broken = shell("printf 'invalid python :::\\n' > " + shlex.quote(module))
+            check("syntax_error_probe_applied", broken["observation"]["exit_code"] == 0)
+            syntax_error = call("step", {"operation": "finish"})
+            report["syntax_error_result"] = syntax_error
+            check("agent_syntax_error_is_reward_zero", syntax_error["done"] and syntax_error["reward"] == 0)
         call("reset", {"task_id": args.task_id})
         if args.solution:
             script = args.solution.read_text()

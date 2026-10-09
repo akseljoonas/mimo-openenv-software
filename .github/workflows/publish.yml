@@ -39,13 +39,13 @@ jobs:
           TASK_ID: ${{ matrix.task_id }}
           TASK_IMAGE: ${{ matrix.source_image }}
           DOCKER_DEFAULT_PLATFORM: linux/amd64
-        run: openenv build -t "ghcr.io/akseljoonas/mimo-openenv-software:${TASK_ID}-v3b" --build-arg "TASK_ID=$TASK_ID" --build-arg "TASK_IMAGE=$TASK_IMAGE"
+        run: openenv build -t "ghcr.io/akseljoonas/mimo-openenv-software:${TASK_ID}-v3c" --build-arg "TASK_ID=$TASK_ID" --build-arg "TASK_IMAGE=$TASK_IMAGE"
       - name: Replay real episodes
         env:
           TASK_ID: ${{ matrix.task_id }}
           DATASET_TYPE: ${{ matrix.dataset_type }}
         run: |
-          python verify.py "ghcr.io/akseljoonas/mimo-openenv-software:${TASK_ID}-v3b" "$TASK_ID" --dataset-type "$DATASET_TYPE" --solution "solutions/${TASK_ID}.py" --output "evidence/${TASK_ID}.json"
+          python verify.py "ghcr.io/akseljoonas/mimo-openenv-software:${TASK_ID}-v3c" "$TASK_ID" --dataset-type "$DATASET_TYPE" --solution "solutions/${TASK_ID}.py" --output "evidence/${TASK_ID}.json"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -59,4 +59,4 @@ jobs:
       - name: Publish verified image
         env:
           TASK_ID: ${{ matrix.task_id }}
-        run: docker push "ghcr.io/akseljoonas/mimo-openenv-software:${TASK_ID}-v3b"
+        run: docker push "ghcr.io/akseljoonas/mimo-openenv-software:${TASK_ID}-v3c"
