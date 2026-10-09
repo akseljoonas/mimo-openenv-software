@@ -37,7 +37,7 @@ Twelve original tasks from [XiaomiMiMo/MiMo-V2.6-RL-oss](https://huggingface.co/
 - Authlib: explicit JOSE key inputs and security boundaries.
 - Partitura: MusicXML-to-MIDI conversion and artifact consistency.
 
-Selection favors a compact mix of data, document, numerical, media, CAD and security operations. It is a qualitative curriculum choice, not an empirically established optimum. Most tasks remain repository repair or implementation work; topic overlap does not demonstrate transfer to full benchmark workflows. Original benchmark questions are not used or supplied. Environment checks establish functioning graders, not model performance or an expected evaluation score.
+Selection favors a compact mix of data, document, numerical, media, CAD and security operations. It is a qualitative curriculum choice, not an empirically established optimum. Most tasks remain repository repair or implementation work; topic overlap does not demonstrate transfer to full benchmark workflows. The exact private Arena questions and task IDs remain unknown. Environment checks establish functioning graders, not model performance or an expected evaluation score.
 
 ## Runtime contract
 
@@ -50,6 +50,8 @@ Code tasks use Xiaomi's published `OpenSourceCodeEnvironment` unchanged. Its ori
 Terminal tasks restore `/app`. Their original base64-encoded test files are decoded without modification, materialized in root-owned `/tests` only during grading and removed afterward. The original `test.sh` runs as UID 2000 outside the writable workspace. Its binary `/logs/verifier/reward.txt` is authoritative: ordinary pytest failure statuses (including collection errors caused by a broken solution) with reward 0 are valid, as is the original guard's exit 0 with reward 0. Missing/invalid verdicts, timeout or abnormal exit statuses are errors. Reward 1 requires exit 0. Original integrity guards remain enabled.
 
 The adapter uses a separate Python runtime. Two terminal images need explicit dependency repairs outside `/app`: OpenSCAD needs Arpeggio 2.0.3; Authlib needs cryptography 46.0.3, cffi 2.0.0 and pycparser 2.23. These exact additions are declared in `task-dependencies.json`; task code and graders remain unchanged.
+
+The Arena request allows 180 seconds for reset and 120 seconds for grading, with 64 tool calls, 32,768 completion/context tokens, 2 CPUs, 16 GiB of memory and a 10 GiB workspace. Code rollouts retain the earlier 1,200-second budget; terminal rollouts retain their original 900-second task deadline. Arena supplies outbound internet. The terminal records request offline operation, but this adapter does not enforce a network restriction; their original graders and the reference repairs run without external services.
 
 ## Pinned sources and ownership
 
@@ -80,6 +82,6 @@ The `Publish images` GitHub workflow builds each image on native Linux, performs
 
 ## Release status
 
-The v3 curriculum is being validated for publication. The root `submission.json` remains the last accepted v2 request until the v3 image digests are published and checked. Version-specific evidence is kept separately; v2 reports are not evidence for v3.
+All twelve final `v3c` images passed [native Linux CI](https://github.com/akseljoonas/mimo-openenv-software/actions/runs/37940898454), anonymous pulls and complete positive/negative/reset episodes: 159 checks in each pass. The largest image is 1.87 GB compressed; unique layers total 11.17 GB. Peak observed writable usage was 903 MB, within the requested 10 GiB workspace. The digest-pinned request is `submission.json`; evidence is under `evidence/v3/`. Publication and environment validation do not establish Arena admission or a benchmark score. Earlier `v3` tags are superseded; one exceeded the image-size cap. The final images use `v3c` tags and new digests. No v3 submission has been made yet.
 
 The earlier eight-task [v2 run](https://openenvarena-training.hf.space/?project=akseljoonas&runs=03bfc81de59cf3e53b9e05d0) completed 77 optimizer steps and scored 4/40 on its private evaluation. This historical individual-run result is distinct from an account leaderboard's best-per-domain aggregate and is not a prediction for the new curriculum.

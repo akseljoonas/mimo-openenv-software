@@ -125,15 +125,22 @@
       "observed_at": "2026-10-09T13:23:00Z",
       "decision": "User authorized finalizing the strongest evidence-supported plan and launching one job. Select twelve original tasks with broad operations and repeated exposure; retain original graders and no model trials.",
       "limits": "Quota, validation and immutable-public-image gates remain mandatory; no established score forecast."
+    },
+    {
+      "observed_at": "2026-10-09T14:21:23.808754+00:00",
+      "decision": "Finalize twelve tasks and one digest-pinned request after native and anonymous image validation plus public dataset verification. Wait for the rolling account slot; preserve paused monitoring and no model trials.",
+      "evidence": "evidence/v3/preflight.json",
+      "limits": "No Arena submission yet and no established private score forecast."
     }
   ],
   "curated_candidate": {
     "manifest": "tasks.jsonl",
-    "status": "v3_final_validation",
+    "status": "validated_waiting_for_quota",
     "task_count": 12,
     "code_core_count": 9,
     "terminal_extension_count": 3,
-    "validation": "Full original positive/negative/reset checks in progress; publication and submission pending."
+    "validation": "Twelve final v3c images pass 159 native and 159 published-image checks, original 0/1/0 episodes, syntax-error and tamper negatives, schemas, registry/resource limits and HF CLI byte verification.",
+    "request": "submission.json"
   },
   "pre_submission_objective": {
     "target_percent": 45,
@@ -145,8 +152,8 @@
     "rule": "45 percent target and 30 percent minimum are objectives, not measured forecasts. Choose one curriculum through qualitative public-evidence analysis; no model ablations, pilot training or proxy evaluation. Require source/data integrity and runtime/grader correctness checks. Preserve the daily submission limit and paused schedule."
   },
   "launch_gate": {
-    "status": "HOLD",
-    "evidence": "experiments/prelaunch-20261009/assessment.json",
-    "rule": "Do not submit this selection until all final immutable OpenEnv images pass original positive/negative/reset, schema, resource and registry checks. Preserve original graders; do not mistake reward.txt=0 with exit=0 for success. Technical checks do not validate a 30% or 45% forecast."
+    "status": "READY_PENDING_LIVE_QUOTA",
+    "evidence": "evidence/v3/preflight.json",
+    "rule": "Submit this one validated immutable request only when live account quota permits and its exact ID is absent. No other candidates or scheduled experiments may run."
   }
 }

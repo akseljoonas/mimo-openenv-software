@@ -1,0 +1,245 @@
+{
+  "image": "ghcr.io/akseljoonas/mimo-openenv-software:format-code-task-001659-v3c",
+  "task_id": "format-code-task-001659",
+  "dataset_type": "opensource-code",
+  "checks": [
+    "health_within_120_seconds",
+    "openenv_endpoint_validation",
+    "reset_task_identity",
+    "unprivileged_agent_and_protected_verifier",
+    "no_future_git_history",
+    "unsolved_terminal_reward_zero",
+    "terminal_reward_is_stable",
+    "reset_removes_previous_edits",
+    "verifier_git_hooks_are_unprivileged",
+    "reference_repair_applied_through_action",
+    "reference_terminal_reward_one",
+    "reset_restores_unsolved_task"
+  ],
+  "episode_timings": [
+    {
+      "operation": "reset",
+      "seconds": 0.109
+    },
+    {
+      "operation": "shell",
+      "seconds": 0.011
+    },
+    {
+      "operation": "shell",
+      "seconds": 0.01
+    },
+    {
+      "operation": "finish",
+      "seconds": 0.56
+    },
+    {
+      "operation": "finish",
+      "seconds": 0.001
+    },
+    {
+      "operation": "reset",
+      "seconds": 0.118
+    },
+    {
+      "operation": "shell",
+      "seconds": 0.007
+    },
+    {
+      "operation": "reset",
+      "seconds": 0.118
+    },
+    {
+      "operation": "shell",
+      "seconds": 0.008
+    },
+    {
+      "operation": "shell",
+      "seconds": 0.01
+    },
+    {
+      "operation": "finish",
+      "seconds": 0.608
+    },
+    {
+      "operation": "reset",
+      "seconds": 0.118
+    },
+    {
+      "operation": "shell",
+      "seconds": 0.038
+    },
+    {
+      "operation": "finish",
+      "seconds": 0.665
+    },
+    {
+      "operation": "reset",
+      "seconds": 0.117
+    },
+    {
+      "operation": "finish",
+      "seconds": 0.558
+    }
+  ],
+  "ready_seconds": 3.01,
+  "schema": {
+    "action": {
+      "additionalProperties": false,
+      "properties": {
+        "metadata": {
+          "additionalProperties": true,
+          "description": "Additional metadata for the action",
+          "title": "Metadata",
+          "type": "object"
+        },
+        "operation": {
+          "description": "Run a bash command or finish and grade the repository.",
+          "enum": [
+            "shell",
+            "finish"
+          ],
+          "title": "Operation",
+          "type": "string"
+        },
+        "command": {
+          "default": "",
+          "description": "Bash command; each call starts in the task repository.",
+          "maxLength": 16000,
+          "title": "Command",
+          "type": "string"
+        }
+      },
+      "required": [
+        "operation"
+      ],
+      "title": "ShellAction",
+      "type": "object"
+    },
+    "observation": {
+      "additionalProperties": false,
+      "properties": {
+        "done": {
+          "default": false,
+          "description": "Whether the episode has terminated",
+          "title": "Done",
+          "type": "boolean"
+        },
+        "reward": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Reward signal from the last action",
+          "title": "Reward"
+        },
+        "metadata": {
+          "additionalProperties": true,
+          "description": "Additional metadata for the observation",
+          "title": "Metadata",
+          "type": "object"
+        },
+        "task_id": {
+          "title": "Task Id",
+          "type": "string"
+        },
+        "output": {
+          "maxLength": 16000,
+          "title": "Output",
+          "type": "string"
+        },
+        "exit_code": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Exit Code"
+        }
+      },
+      "required": [
+        "task_id",
+        "output"
+      ],
+      "title": "ShellObservation",
+      "type": "object"
+    },
+    "state": {
+      "additionalProperties": true,
+      "description": "Base class for environment state.\n\nRepresents internal environment state, separate from observations.",
+      "properties": {
+        "episode_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Unique identifier for the current episode",
+          "title": "Episode Id"
+        },
+        "step_count": {
+          "default": 0,
+          "description": "Number of steps taken in the current episode",
+          "minimum": 0,
+          "title": "Step Count",
+          "type": "integer"
+        }
+      },
+      "title": "State",
+      "type": "object"
+    }
+  },
+  "openenv_validation": "Validation report for http://127.0.0.1:32768 (profile: openenv-http/1.x)\n  standard version: 1.0.0 \u00b7 mode: simulation\n  PASS  openapi_version_available\n  PASS  health_endpoint\n  PASS  metadata_endpoint\n  PASS  schema_endpoint\n  PASS  mcp_endpoint\n  PASS  mode_endpoint_consistency\nVerdict: PASS\n",
+  "peak_observed_writable_bytes": 34240340,
+  "unsolved_result": {
+    "observation": {
+      "metadata": {},
+      "task_id": "format-code-task-001659",
+      "output": "Original MiMo verifier completed.",
+      "exit_code": 2
+    },
+    "reward": 0.0,
+    "done": true
+  },
+  "reference_action": {
+    "observation": {
+      "metadata": {},
+      "task_id": "format-code-task-001659",
+      "output": "",
+      "exit_code": 0
+    },
+    "reward": 0.0,
+    "done": false
+  },
+  "reference_result": {
+    "observation": {
+      "metadata": {},
+      "task_id": "format-code-task-001659",
+      "output": "Original MiMo verifier completed.",
+      "exit_code": 0
+    },
+    "reward": 1.0,
+    "done": true
+  },
+  "passed": true,
+  "container_logs": "INFO:     Started server process [1]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)\nINFO:     172.17.0.1:54088 - \"WebSocket /ws\" [accepted]\nINFO:     connection open\n"
+}

@@ -1,0 +1,101 @@
+{
+  "results": [
+    {
+      "task_id": "format-code-task-002860",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:dd7a26f058f9a1e8de05b4269dc52a6e83bd4fbead803cf972dc20f1ef1f1aea",
+      "anonymous_pull": true,
+      "episodes_passed": true,
+      "peak_observed_writable_bytes": 185376768,
+      "docker_reported_image_bytes": 1505084258
+    },
+    {
+      "task_id": "format-code-task-002230",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:0092efb9c4448b4127c568a2906a76fa0cde149e0f6d5427cb6dd96ac3a27d3b",
+      "anonymous_pull": true,
+      "episodes_passed": true,
+      "peak_observed_writable_bytes": 903467008,
+      "docker_reported_image_bytes": 1870590434
+    },
+    {
+      "task_id": "format-code-task-000666",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:2031f3313b3a94474fcb8f9d0b2d416eb0bb86346dd32d8dbf177384c7a681c9",
+      "anonymous_pull": true,
+      "episodes_passed": true,
+      "peak_observed_writable_bytes": 7282688,
+      "docker_reported_image_bytes": 573956726
+    },
+    {
+      "task_id": "format-code-task-001659",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:644038662ca0aaec4c2b50673da2337581b0ba8e1f19d0ee5d1b6391121bf296",
+      "anonymous_pull": true,
+      "episodes_passed": true,
+      "peak_observed_writable_bytes": 34926592,
+      "docker_reported_image_bytes": 1008423874
+    },
+    {
+      "task_id": "format-code-task-002220",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:0458f1fdfb4a79168ad6b7aa393ef4c1935f6acea36a322cd39ca56c36bd1370",
+      "anonymous_pull": true,
+      "episodes_passed": true,
+      "peak_observed_writable_bytes": 701374464,
+      "docker_reported_image_bytes": 1630425903
+    },
+    {
+      "task_id": "format-code-task-002736",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:e4a5ecd12a8c214d13320beed3106f3820a7af01e2d391adfd20bab03537e43e",
+      "anonymous_pull": true,
+      "episodes_passed": true,
+      "peak_observed_writable_bytes": 259145728,
+      "docker_reported_image_bytes": 869331556
+    },
+    {
+      "task_id": "format-code-task-001926",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:0b68bf274f65a72c13a7a6758138941aaa1b9f2fda488e05850bb466c1f9db17",
+      "anonymous_pull": true,
+      "episodes_passed": true,
+      "peak_observed_writable_bytes": 328921088,
+      "docker_reported_image_bytes": 911126329
+    },
+    {
+      "task_id": "format-code-task-001886",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:83520092a71495aec0501876e3366d9f66dcdb7d19b18fce768a329172a30bfe",
+      "anonymous_pull": true,
+      "episodes_passed": true,
+      "peak_observed_writable_bytes": 1445888,
+      "docker_reported_image_bytes": 796468292
+    },
+    {
+      "task_id": "format-code-task-000613",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:b4e4277097fdffbe6a312bae2af976c8694f7f973780851590db38605da4d028",
+      "anonymous_pull": true,
+      "episodes_passed": true,
+      "peak_observed_writable_bytes": 656359424,
+      "docker_reported_image_bytes": 1288580120
+    },
+    {
+      "task_id": "candidate-2500-hardware-cad",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:98a803c1727bbf113557b60a7ce947c6398a93bdfade82f0aebc49082a820de5",
+      "anonymous_pull": true,
+      "episodes_passed": true,
+      "peak_observed_writable_bytes": 385024,
+      "docker_reported_image_bytes": 432966248
+    },
+    {
+      "task_id": "candidate-2376-security-cryptography",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:31233cc7f94a0c369a8fa8f52c97bf1d971958de055ad0e07014dc889f75d047",
+      "anonymous_pull": true,
+      "episodes_passed": true,
+      "peak_observed_writable_bytes": 1683456,
+      "docker_reported_image_bytes": 438515797
+    },
+    {
+      "task_id": "candidate-0628-media-music",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:0d0ce3e0b87de773b2c4a8726ec4b649d3a7d1e112a39f8e28d37a1b7fdcad23",
+      "anonymous_pull": true,
+      "episodes_passed": true,
+      "peak_observed_writable_bytes": 3362816,
+      "docker_reported_image_bytes": 433794475
+    }
+  ],
+  "size_note": "Docker image Size is backend-specific and is not claimed as a measured expanded filesystem size."
+}

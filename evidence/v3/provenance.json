@@ -1,0 +1,94 @@
+{
+  "observed_at": "2026-10-09T13:41:33.682106+00:00",
+  "dataset": "XiaomiMiMo/MiMo-V2.6-RL-oss",
+  "revision": "639865fd3374018d6cb29b9fb82dd531406fcf5f",
+  "records": [
+    {
+      "task_id": "format-code-task-002860",
+      "source_split": "code",
+      "source_row": 610,
+      "original_record_preserved": true,
+      "public_record_sha256": "3f19ad2c74f76a37923ea9d99ba6e162795155a3ba3e30e9ece876eb59872b00"
+    },
+    {
+      "task_id": "format-code-task-002230",
+      "source_split": "code",
+      "source_row": 72,
+      "original_record_preserved": true,
+      "public_record_sha256": "78d621e648d7145be0a067cf9b5afce99f78381b74ae3fedb4f5df0533782ec5"
+    },
+    {
+      "task_id": "format-code-task-000666",
+      "source_split": "code",
+      "source_row": 50,
+      "original_record_preserved": true,
+      "public_record_sha256": "e3b09ca80d91baef357d840a87c5c20294a398912bdd36465ef1851e3fa53c91"
+    },
+    {
+      "task_id": "format-code-task-001659",
+      "source_split": "code",
+      "source_row": 2335,
+      "original_record_preserved": true,
+      "public_record_sha256": "0d7b938fcdfbfe82436d48a51369e5ac83be03dd7867915ed243fa8adbdb980d"
+    },
+    {
+      "task_id": "format-code-task-002220",
+      "source_split": "code",
+      "source_row": 2214,
+      "original_record_preserved": true,
+      "public_record_sha256": "900456e6a41e3032733be317b1f3f7e4a1284055e7d0b67a82619069cd56e7a5"
+    },
+    {
+      "task_id": "format-code-task-002736",
+      "source_split": "code",
+      "source_row": 2249,
+      "original_record_preserved": true,
+      "public_record_sha256": "671c739fd6581fa42fd2ec58261d1a913c073314cd075ac72d0aad080f07e35c"
+    },
+    {
+      "task_id": "format-code-task-001926",
+      "source_split": "code",
+      "source_row": 2610,
+      "original_record_preserved": true,
+      "public_record_sha256": "4ce81aef8baf1f619dd054003031e74a2cb8c5fe18377770fdd8fcd9e7cf6f7e"
+    },
+    {
+      "task_id": "format-code-task-001886",
+      "source_split": "code",
+      "source_row": 2096,
+      "original_record_preserved": true,
+      "public_record_sha256": "d3a5b4f9b597c1522353432f1999e376c470868c072030bbdc852f471b7b02fc"
+    },
+    {
+      "task_id": "format-code-task-000613",
+      "source_split": "code",
+      "source_row": 1728,
+      "original_record_preserved": true,
+      "public_record_sha256": "820a3dd93f3a47acc7750f8babdbee7499850746d7fd88b2886c3c4cb41fa106"
+    },
+    {
+      "task_id": "candidate-2500-hardware-cad",
+      "source_split": "general",
+      "source_row": 50,
+      "original_record_preserved": true,
+      "public_record_sha256": "fa026280e793a1c20da1cb3f116c7b9884610f3b35de5b964363bdcc234814b6"
+    },
+    {
+      "task_id": "candidate-2376-security-cryptography",
+      "source_split": "general",
+      "source_row": 48,
+      "original_record_preserved": true,
+      "public_record_sha256": "d71d18a74c686d48b6e0e96b0efba14392c805653112f8036c190d088bb0d086"
+    },
+    {
+      "task_id": "candidate-0628-media-music",
+      "source_split": "general",
+      "source_row": 7,
+      "original_record_preserved": true,
+      "public_record_sha256": "76c2db5f53cb547616ce26d489c23e72b10cecf8ba4216d8c1264bee2077c0f5"
+    }
+  ],
+  "public_source_only": true,
+  "model_trials": 0,
+  "limits": "Preserving source records and testing reference repairs does not establish model performance."
+}

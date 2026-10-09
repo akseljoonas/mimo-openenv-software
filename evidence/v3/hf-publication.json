@@ -1,0 +1,22 @@
+{
+  "id": "akseljoonas/mimo-openenv-software",
+  "revision": "2a3480c3e7159d992d5dd8a1b6322a9cb42a3b8e",
+  "private": false,
+  "gated": false,
+  "task_files": [
+    "tasks/candidate-0628-media-music.json",
+    "tasks/candidate-2376-security-cryptography.json",
+    "tasks/candidate-2500-hardware-cad.json",
+    "tasks/format-code-task-000613.json",
+    "tasks/format-code-task-000666.json",
+    "tasks/format-code-task-001659.json",
+    "tasks/format-code-task-001886.json",
+    "tasks/format-code-task-001926.json",
+    "tasks/format-code-task-002220.json",
+    "tasks/format-code-task-002230.json",
+    "tasks/format-code-task-002736.json",
+    "tasks/format-code-task-002860.json"
+  ],
+  "verified_download_files": 71,
+  "all_downloaded_bytes_match": true
+}

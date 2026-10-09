@@ -1,0 +1,855 @@
+{
+  "images": [
+    {
+      "task_id": "format-code-task-002860",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:dd7a26f058f9a1e8de05b4269dc52a6e83bd4fbead803cf972dc20f1ef1f1aea",
+      "tag": "format-code-task-002860-v3c",
+      "compressed_bytes": 1505079372,
+      "layers": 6,
+      "platform": "linux/amd64",
+      "anonymous_manifest_and_config_access": true,
+      "runtime": {
+        "User": "root",
+        "WorkingDir": "/opt/arena",
+        "Entrypoint": null,
+        "Cmd": [
+          "/opt/arena-python/bin/python3",
+          "-m",
+          "uvicorn",
+          "server:app",
+          "--host",
+          "0.0.0.0",
+          "--port",
+          "8000"
+        ],
+        "ExposedPorts": {
+          "8000/tcp": {}
+        },
+        "Labels": {
+          "org.opencontainers.image.source": "https://github.com/akseljoonas/mimo-openenv-software"
+        }
+      },
+      "layer_descriptors": [
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 1227495261,
+          "digest": "sha256:f08a284e2a2ef5e3b9565a27671382650c656bd3f7896d7873da33db81fc3386"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 140502528,
+          "digest": "sha256:869fd0b59f4edf17b8b9d04e384e003e7a8294453690659f84d175dc2baf4b48"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 4020,
+          "digest": "sha256:30c4dbcd0f6a312aba65acc2ca10da528f3729bb1f8257d43b1aafc7cb930f9e"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 1602,
+          "digest": "sha256:eb972a13843208cbe0171a12640c198e2f550eb2044f0ac60defcadd51b8d2b0"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 137075929,
+          "digest": "sha256:a17868a5de7441d82f693e9c5aba716438880d2ffa319941bda562dc5b456c2a"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 32,
+          "digest": "sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1"
+        }
+      ]
+    },
+    {
+      "task_id": "format-code-task-002230",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:0092efb9c4448b4127c568a2906a76fa0cde149e0f6d5427cb6dd96ac3a27d3b",
+      "tag": "format-code-task-002230-v3c",
+      "compressed_bytes": 1870585554,
+      "layers": 6,
+      "platform": "linux/amd64",
+      "anonymous_manifest_and_config_access": true,
+      "runtime": {
+        "User": "root",
+        "WorkingDir": "/opt/arena",
+        "Entrypoint": null,
+        "Cmd": [
+          "/opt/arena-python/bin/python3",
+          "-m",
+          "uvicorn",
+          "server:app",
+          "--host",
+          "0.0.0.0",
+          "--port",
+          "8000"
+        ],
+        "ExposedPorts": {
+          "8000/tcp": {}
+        },
+        "Labels": {
+          "org.opencontainers.image.source": "https://github.com/akseljoonas/mimo-openenv-software"
+        }
+      },
+      "layer_descriptors": [
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 1269637172,
+          "digest": "sha256:9b35f7f109aeb0f87414bc3279bb3458a6838ab836daed74677e5911dce2fd99"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 140502190,
+          "digest": "sha256:14e652b833b592fad615e8de5c71fabe6ee07469dd50f7018175e1e5ac0c54d2"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 4018,
+          "digest": "sha256:1501d0b13b0e22434025b31e99fbaae12a759783fdd582024c6c6661811fca88"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 2388,
+          "digest": "sha256:2527b1366582b189668f3aaf1d6b4ec0229077e9b91be7521142f23426aed11b"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 460439754,
+          "digest": "sha256:09bd8346f3964d28f3bbaf679c9ca314de88333c69723eec0e76ef8bd6a8861e"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 32,
+          "digest": "sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1"
+        }
+      ]
+    },
+    {
+      "task_id": "format-code-task-000666",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:2031f3313b3a94474fcb8f9d0b2d416eb0bb86346dd32d8dbf177384c7a681c9",
+      "tag": "format-code-task-000666-v3c",
+      "compressed_bytes": 573951843,
+      "layers": 6,
+      "platform": "linux/amd64",
+      "anonymous_manifest_and_config_access": true,
+      "runtime": {
+        "User": "root",
+        "WorkingDir": "/opt/arena",
+        "Entrypoint": null,
+        "Cmd": [
+          "/opt/arena-python/bin/python3",
+          "-m",
+          "uvicorn",
+          "server:app",
+          "--host",
+          "0.0.0.0",
+          "--port",
+          "8000"
+        ],
+        "ExposedPorts": {
+          "8000/tcp": {}
+        },
+        "Labels": {
+          "org.opencontainers.image.source": "https://github.com/akseljoonas/mimo-openenv-software"
+        }
+      },
+      "layer_descriptors": [
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 431542190,
+          "digest": "sha256:9a1e383e068632047045a276f891d457dff25d68d1c0a20eeeceb8b81b855b35"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 140501547,
+          "digest": "sha256:1b41855cccc730788360ef6261e2516d24d3c5f015b319ed61d0413c200802ce"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 4020,
+          "digest": "sha256:006a47175527b3de695ebaec3280907ae6f2fbd7878a7d39495382b98088cbc7"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 2271,
+          "digest": "sha256:92e87f787a050392916c7d331c0c6593a80ec9ac92544b33b6ebe33d747aa3cc"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 1901783,
+          "digest": "sha256:647d66c53d9fb3c47deca38b6b85501a4c6cc5d3e5f1744f6f56cf080316d28d"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 32,
+          "digest": "sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1"
+        }
+      ]
+    },
+    {
+      "task_id": "format-code-task-001659",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:644038662ca0aaec4c2b50673da2337581b0ba8e1f19d0ee5d1b6391121bf296",
+      "tag": "format-code-task-001659-v3c",
+      "compressed_bytes": 1008418997,
+      "layers": 6,
+      "platform": "linux/amd64",
+      "anonymous_manifest_and_config_access": true,
+      "runtime": {
+        "User": "root",
+        "WorkingDir": "/opt/arena",
+        "Entrypoint": null,
+        "Cmd": [
+          "/opt/arena-python/bin/python3",
+          "-m",
+          "uvicorn",
+          "server:app",
+          "--host",
+          "0.0.0.0",
+          "--port",
+          "8000"
+        ],
+        "ExposedPorts": {
+          "8000/tcp": {}
+        },
+        "Labels": {
+          "org.opencontainers.image.source": "https://github.com/akseljoonas/mimo-openenv-software"
+        }
+      },
+      "layer_descriptors": [
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 838970701,
+          "digest": "sha256:177ce965738b320374d6aaf07f31ef1a8b93c4adc0f0722114afd94e60f137d2"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 140502349,
+          "digest": "sha256:81c521f953271ea97712aac6fcf575b01719ee5da5c9f8d10582f5ae6b5379a2"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 4020,
+          "digest": "sha256:98ec2f9502d9eb811d580b71f385ad530edebc7d7bc2e426027ca9d404c81010"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 2526,
+          "digest": "sha256:c26d0e28604ac7779cd546515e33667e3b6249d5cf9c16851de8bb463dd5f2f4"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 28939369,
+          "digest": "sha256:1f59e7c8e96028fa7cfbd7faff92fae3bb7755ff3be2f4345a91388083d243b6"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 32,
+          "digest": "sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1"
+        }
+      ]
+    },
+    {
+      "task_id": "format-code-task-002220",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:0458f1fdfb4a79168ad6b7aa393ef4c1935f6acea36a322cd39ca56c36bd1370",
+      "tag": "format-code-task-002220-v3c",
+      "compressed_bytes": 1630421023,
+      "layers": 6,
+      "platform": "linux/amd64",
+      "anonymous_manifest_and_config_access": true,
+      "runtime": {
+        "User": "root",
+        "WorkingDir": "/opt/arena",
+        "Entrypoint": null,
+        "Cmd": [
+          "/opt/arena-python/bin/python3",
+          "-m",
+          "uvicorn",
+          "server:app",
+          "--host",
+          "0.0.0.0",
+          "--port",
+          "8000"
+        ],
+        "ExposedPorts": {
+          "8000/tcp": {}
+        },
+        "Labels": {
+          "org.opencontainers.image.source": "https://github.com/akseljoonas/mimo-openenv-software"
+        }
+      },
+      "layer_descriptors": [
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 1147205855,
+          "digest": "sha256:66c7c8e8244b910a0267df9e2295897a40638dab72701068274b99e472647708"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 140501905,
+          "digest": "sha256:02432c4b97a840c85b2b38f278beb8898b32ab79fe4919832b4d6812301277c4"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 4020,
+          "digest": "sha256:f671e9244481fdf337ff6e368a5f399f17ae33445afce3c183c8317769b13c24"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 2644,
+          "digest": "sha256:74b5bb473a2053af0878235334d8330aa23afffd5add79fcecd64307916051c8"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 342706567,
+          "digest": "sha256:cbfc76fce9bdcd7ddfd22ca4047d202eaf94757078359dafb9b79a9f28059f2c"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 32,
+          "digest": "sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1"
+        }
+      ]
+    },
+    {
+      "task_id": "format-code-task-002736",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:e4a5ecd12a8c214d13320beed3106f3820a7af01e2d391adfd20bab03537e43e",
+      "tag": "format-code-task-002736-v3c",
+      "compressed_bytes": 869326672,
+      "layers": 6,
+      "platform": "linux/amd64",
+      "anonymous_manifest_and_config_access": true,
+      "runtime": {
+        "User": "root",
+        "WorkingDir": "/opt/arena",
+        "Entrypoint": null,
+        "Cmd": [
+          "/opt/arena-python/bin/python3",
+          "-m",
+          "uvicorn",
+          "server:app",
+          "--host",
+          "0.0.0.0",
+          "--port",
+          "8000"
+        ],
+        "ExposedPorts": {
+          "8000/tcp": {}
+        },
+        "Labels": {
+          "org.opencontainers.image.source": "https://github.com/akseljoonas/mimo-openenv-software"
+        }
+      },
+      "layer_descriptors": [
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 630788307,
+          "digest": "sha256:d4c1ca24f3afa550bf9f8a61dca55da752f0a39d5826c6a30804d80965412740"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 140501340,
+          "digest": "sha256:dd24a4536214ec8777e32c5b7559cf68b4f8d2eadc9e1b27d93a18edaeecb9eb"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 4019,
+          "digest": "sha256:773aa7e8c879de379dbf74a101096f771997a6eb0b874212028e43982bc21f2b"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 1659,
+          "digest": "sha256:d895be855556dcbaa6ba4e8e1d1e56c1f9ea00477fd76c4daa9667dc7cedd456"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 98031315,
+          "digest": "sha256:75bcff4ea241244c8259af7ebc9b2957d839c717ac181d58fe73e378cc9bebe3"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 32,
+          "digest": "sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1"
+        }
+      ]
+    },
+    {
+      "task_id": "format-code-task-001926",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:0b68bf274f65a72c13a7a6758138941aaa1b9f2fda488e05850bb466c1f9db17",
+      "tag": "format-code-task-001926-v3c",
+      "compressed_bytes": 911121444,
+      "layers": 6,
+      "platform": "linux/amd64",
+      "anonymous_manifest_and_config_access": true,
+      "runtime": {
+        "User": "root",
+        "WorkingDir": "/opt/arena",
+        "Entrypoint": null,
+        "Cmd": [
+          "/opt/arena-python/bin/python3",
+          "-m",
+          "uvicorn",
+          "server:app",
+          "--host",
+          "0.0.0.0",
+          "--port",
+          "8000"
+        ],
+        "ExposedPorts": {
+          "8000/tcp": {}
+        },
+        "Labels": {
+          "org.opencontainers.image.source": "https://github.com/akseljoonas/mimo-openenv-software"
+        }
+      },
+      "layer_descriptors": [
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 662840610,
+          "digest": "sha256:5e2ef81cc2107356373c2575cbb72bbf9a2984fc0092745e0ab1c8f6d1d6077f"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 140499773,
+          "digest": "sha256:824e3e1b0f3d3f0fdf46d51b313f65e3f65781f40cd19a1b8c4d16411969938f"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 4020,
+          "digest": "sha256:42809c16ecdd42043e4a78f39b04abe03b2a1fc50a563982e8df287b5426e1d1"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 2362,
+          "digest": "sha256:078f81a721694f8a66ef126620c5611b327637ef291ef4444f4741dea8a49e57"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 107774647,
+          "digest": "sha256:dadc262899197171635be1d95806a35f2ac4f6817f22df39763c738617ca36dd"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 32,
+          "digest": "sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1"
+        }
+      ]
+    },
+    {
+      "task_id": "format-code-task-001886",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:83520092a71495aec0501876e3366d9f66dcdb7d19b18fce768a329172a30bfe",
+      "tag": "format-code-task-001886-v3c",
+      "compressed_bytes": 796463410,
+      "layers": 6,
+      "platform": "linux/amd64",
+      "anonymous_manifest_and_config_access": true,
+      "runtime": {
+        "User": "root",
+        "WorkingDir": "/opt/arena",
+        "Entrypoint": null,
+        "Cmd": [
+          "/opt/arena-python/bin/python3",
+          "-m",
+          "uvicorn",
+          "server:app",
+          "--host",
+          "0.0.0.0",
+          "--port",
+          "8000"
+        ],
+        "ExposedPorts": {
+          "8000/tcp": {}
+        },
+        "Labels": {
+          "org.opencontainers.image.source": "https://github.com/akseljoonas/mimo-openenv-software"
+        }
+      },
+      "layer_descriptors": [
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 655112675,
+          "digest": "sha256:9d9c7408dff3562e4b7afc44717b3537efd6ca7d2762e0211bd1638e231b7cc9"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 140503200,
+          "digest": "sha256:a89a09d388fb62059d4d8fcd5f53d65787ab346cf244d94f75e138b9e5d51d94"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 4020,
+          "digest": "sha256:445d2fb3ebaea84ea0cc35d3e4bb9159d7c764d2927e31b7dd5d028519ef60a7"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 2899,
+          "digest": "sha256:156430e2f1d272d7fe33fae3c126d56b11c1216f75bfb39d23471935295c6d6a"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 840584,
+          "digest": "sha256:4d60236218870416f760e0b18a34ca12ec9fa1bdae38b4df963009480a3b5b1d"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 32,
+          "digest": "sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1"
+        }
+      ]
+    },
+    {
+      "task_id": "format-code-task-000613",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:b4e4277097fdffbe6a312bae2af976c8694f7f973780851590db38605da4d028",
+      "tag": "format-code-task-000613-v3c",
+      "compressed_bytes": 1288575236,
+      "layers": 6,
+      "platform": "linux/amd64",
+      "anonymous_manifest_and_config_access": true,
+      "runtime": {
+        "User": "root",
+        "WorkingDir": "/opt/arena",
+        "Entrypoint": null,
+        "Cmd": [
+          "/opt/arena-python/bin/python3",
+          "-m",
+          "uvicorn",
+          "server:app",
+          "--host",
+          "0.0.0.0",
+          "--port",
+          "8000"
+        ],
+        "ExposedPorts": {
+          "8000/tcp": {}
+        },
+        "Labels": {
+          "org.opencontainers.image.source": "https://github.com/akseljoonas/mimo-openenv-software"
+        }
+      },
+      "layer_descriptors": [
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 914596225,
+          "digest": "sha256:fd5c213f40fe90cde993d13537c5e5e5765f599de855769a4245ce9bdb1ebcc9"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 140502842,
+          "digest": "sha256:6bdd0c5671b0a60d3125219fcfa13104b821ca45ad39468a0ec2f3f5b61d363c"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 4020,
+          "digest": "sha256:512d9090194b1d9f8793dbb8cac6f64c45053bdf17a95e5446ea6838b1465eff"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 4935,
+          "digest": "sha256:860cbb323421f6c60c36cee1772630e32c33c8d579ebd9fcb546b028ed92bddf"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 233467182,
+          "digest": "sha256:8ee701421b9494a8194df99f0100922ed427d27dab99baaa924e0da3365c486c"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 32,
+          "digest": "sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1"
+        }
+      ]
+    },
+    {
+      "task_id": "candidate-2500-hardware-cad",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:98a803c1727bbf113557b60a7ce947c6398a93bdfade82f0aebc49082a820de5",
+      "tag": "candidate-2500-hardware-cad-v3c",
+      "compressed_bytes": 432953267,
+      "layers": 13,
+      "platform": "linux/amd64",
+      "anonymous_manifest_and_config_access": true,
+      "runtime": {
+        "User": "root",
+        "WorkingDir": "/opt/arena",
+        "Entrypoint": null,
+        "Cmd": [
+          "/opt/arena-python/bin/python3",
+          "-m",
+          "uvicorn",
+          "server:app",
+          "--host",
+          "0.0.0.0",
+          "--port",
+          "8000"
+        ],
+        "ExposedPorts": {
+          "8000/tcp": {}
+        },
+        "Labels": {
+          "org.opencontainers.image.source": "https://github.com/akseljoonas/mimo-openenv-software"
+        }
+      },
+      "layer_descriptors": [
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 29153837,
+          "digest": "sha256:501c3e032d323c5d2ecdc2c3da91ccdf6497a1d8e69fac78ad18322540160970"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 3533359,
+          "digest": "sha256:1c5e03f304918f89aed0c098c8f4b6f163f7bf9d2702991696bf0132a2853e30"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 13671799,
+          "digest": "sha256:a2e58067964fcd8f46a6b5992975e9c8ab34e7620d96204e08e99bf0fdf4dab8"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 249,
+          "digest": "sha256:7c6fab1667eb7d9029684d783e4c127f11dd7ed5120829f875b799a0b9431558"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 425,
+          "digest": "sha256:abb5f4ba24019355c84263b00e88a7858a951a999f2858d128d493a09bbe878c"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 245847513,
+          "digest": "sha256:37c769afae7339c6196fa7aaf707b0d8ff1ef152290ea0e8fe39070091ad148d"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 93,
+          "digest": "sha256:6faa35e4646970f08703fe0cae153c07eab47d9dbd76289675ff390d80f74717"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 55895,
+          "digest": "sha256:14aa096b723fa19b851569b0b56c4f1712e711cabd66aac7d8f24aa00177d6fe"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 140502572,
+          "digest": "sha256:dc5c327ff014cfa494c4818891f33f441a0cef025ddffaa3d47387688a895931"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 4016,
+          "digest": "sha256:68317632bc63885b355f68d507d1a09dc594ec847ab8f1c2600e969bf4665fea"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 12430,
+          "digest": "sha256:abad3c259d1a3952a92c6575a001e8e0b849d229793849d6acca348504991022"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 171047,
+          "digest": "sha256:5e3bda6ea16d7668c44607f1cca1f4b5940ac0958488397c343f2c61c2e3caaf"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 32,
+          "digest": "sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1"
+        }
+      ]
+    },
+    {
+      "task_id": "candidate-2376-security-cryptography",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:31233cc7f94a0c369a8fa8f52c97bf1d971958de055ad0e07014dc889f75d047",
+      "tag": "candidate-2376-security-cryptography-v3c",
+      "compressed_bytes": 438502780,
+      "layers": 13,
+      "platform": "linux/amd64",
+      "anonymous_manifest_and_config_access": true,
+      "runtime": {
+        "User": "root",
+        "WorkingDir": "/opt/arena",
+        "Entrypoint": null,
+        "Cmd": [
+          "/opt/arena-python/bin/python3",
+          "-m",
+          "uvicorn",
+          "server:app",
+          "--host",
+          "0.0.0.0",
+          "--port",
+          "8000"
+        ],
+        "ExposedPorts": {
+          "8000/tcp": {}
+        },
+        "Labels": {
+          "org.opencontainers.image.source": "https://github.com/akseljoonas/mimo-openenv-software"
+        }
+      },
+      "layer_descriptors": [
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 29153837,
+          "digest": "sha256:501c3e032d323c5d2ecdc2c3da91ccdf6497a1d8e69fac78ad18322540160970"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 3533359,
+          "digest": "sha256:1c5e03f304918f89aed0c098c8f4b6f163f7bf9d2702991696bf0132a2853e30"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 13671799,
+          "digest": "sha256:a2e58067964fcd8f46a6b5992975e9c8ab34e7620d96204e08e99bf0fdf4dab8"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 249,
+          "digest": "sha256:7c6fab1667eb7d9029684d783e4c127f11dd7ed5120829f875b799a0b9431558"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 425,
+          "digest": "sha256:abb5f4ba24019355c84263b00e88a7858a951a999f2858d128d493a09bbe878c"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 245847513,
+          "digest": "sha256:37c769afae7339c6196fa7aaf707b0d8ff1ef152290ea0e8fe39070091ad148d"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 93,
+          "digest": "sha256:6faa35e4646970f08703fe0cae153c07eab47d9dbd76289675ff390d80f74717"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 173880,
+          "digest": "sha256:e89b177b91fcc62479eb58a376b2391b1264c2be6fe66d715fbf2e9aa32de763"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 140502593,
+          "digest": "sha256:e43023fbbcd02f07ead4e985ddb7772134500afbeff6b3ea1d5fb6015081c4b8"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 4019,
+          "digest": "sha256:69a7b4807970a9727cc0f03dfcdfc0d0853b46b0595848dffb5d5fd9ff520a09"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 21575,
+          "digest": "sha256:b502ca1c043b18b6fd9e25473e55d3b99d23bbcf1870a6d4b3dca69d7bcbbd5b"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 5593406,
+          "digest": "sha256:c71d6eb861b2801e94fc16715cb7b20755bb1625e6056fd3d02c8628069d11bd"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 32,
+          "digest": "sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1"
+        }
+      ]
+    },
+    {
+      "task_id": "candidate-0628-media-music",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:0d0ce3e0b87de773b2c4a8726ec4b649d3a7d1e112a39f8e28d37a1b7fdcad23",
+      "tag": "candidate-0628-media-music-v3c",
+      "compressed_bytes": 433781488,
+      "layers": 13,
+      "platform": "linux/amd64",
+      "anonymous_manifest_and_config_access": true,
+      "runtime": {
+        "User": "root",
+        "WorkingDir": "/opt/arena",
+        "Entrypoint": null,
+        "Cmd": [
+          "/opt/arena-python/bin/python3",
+          "-m",
+          "uvicorn",
+          "server:app",
+          "--host",
+          "0.0.0.0",
+          "--port",
+          "8000"
+        ],
+        "ExposedPorts": {
+          "8000/tcp": {}
+        },
+        "Labels": {
+          "org.opencontainers.image.source": "https://github.com/akseljoonas/mimo-openenv-software"
+        }
+      },
+      "layer_descriptors": [
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 29153837,
+          "digest": "sha256:501c3e032d323c5d2ecdc2c3da91ccdf6497a1d8e69fac78ad18322540160970"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 3533359,
+          "digest": "sha256:1c5e03f304918f89aed0c098c8f4b6f163f7bf9d2702991696bf0132a2853e30"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 13671799,
+          "digest": "sha256:a2e58067964fcd8f46a6b5992975e9c8ab34e7620d96204e08e99bf0fdf4dab8"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 249,
+          "digest": "sha256:7c6fab1667eb7d9029684d783e4c127f11dd7ed5120829f875b799a0b9431558"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 425,
+          "digest": "sha256:abb5f4ba24019355c84263b00e88a7858a951a999f2858d128d493a09bbe878c"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 245847513,
+          "digest": "sha256:37c769afae7339c6196fa7aaf707b0d8ff1ef152290ea0e8fe39070091ad148d"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 93,
+          "digest": "sha256:6faa35e4646970f08703fe0cae153c07eab47d9dbd76289675ff390d80f74717"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 525748,
+          "digest": "sha256:567825671ece29d6195c368b9a2ba5cbb475b3224349e5eee3e23813011e83ad"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 140499703,
+          "digest": "sha256:088cdfca8da14228c8c4019ce1708cabf09208a3671f8bd0f759cfc27f8f7226"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 4021,
+          "digest": "sha256:416b0569eea17a3229c57cd09547759f83a9258ba80ebeefdadf0661b7f81d04"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 13114,
+          "digest": "sha256:109d41dcfa5c995810558dc22ee3b8f0ba7430ec421a0ca9b11e13d961abe057"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 531595,
+          "digest": "sha256:e73914a70026c11acf336c7e16d6924810d8957eb09343e06733813c7023e693"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 32,
+          "digest": "sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1"
+        }
+      ]
+    }
+  ],
+  "compressed_unique_bytes": 11174766184,
+  "largest_image_compressed_bytes": 1870585554
+}
