@@ -58,6 +58,9 @@ try:
             response = json.loads(ws.recv(timeout=1850))
             assert response["type"] == "observation", response
             report["episode_timings"].append({"operation": data.get("operation", kind), "seconds": round(time.monotonic() - began, 3)})
+            if data.get("operation") == "finish":
+                usage = int(subprocess.check_output(["docker", "inspect", "--size", "--format", "{{.SizeRw}}", name], text=True))
+                report["peak_observed_writable_bytes"] = max(report.get("peak_observed_writable_bytes", 0), usage)
             return response["data"]
 
         def shell(command):

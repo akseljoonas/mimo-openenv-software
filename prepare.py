@@ -1,6 +1,7 @@
 """Prepare the upstream image to meet MiMo's documented image contract."""
 import json
 from pathlib import Path
+import shutil
 import subprocess
 import tarfile
 
@@ -23,4 +24,5 @@ elif list(cwd.rglob(".git")):
 env.setup_environment()
 with tarfile.open(root / "workspace.tar", "w") as archive:
     archive.add(cwd, arcname=cwd.name)
+shutil.rmtree(cwd)
 print(json.dumps({"task_id": instance["instance_id"], "base_commit": base, "history_checked": True}))

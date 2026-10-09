@@ -12,7 +12,7 @@ configs:
   - config_name: default
     data_files:
       - split: train
-        path: tasks/*.json
+        path: tasks.jsonl
 ---
 
 # MiMo curriculum for OpenEnv
@@ -23,7 +23,7 @@ Twelve original tasks from [XiaomiMiMo/MiMo-V2.6-RL-oss](https://huggingface.co/
 
 ## Curriculum
 
-`tasks.jsonl` records task identities, immutable upstream images, source positions and intended skills. `tasks/` contains the original records. The selected tasks exercise:
+`tasks.jsonl` records task identities, immutable upstream images, source positions and intended skills. `tasks/` contains the original records. The dataset viewer exposes the uniform task catalog; original code and terminal records retain their separate schemas. The selected tasks exercise:
 
 - SQLGlot: BigQuery conditional counting and SQL dialect conversion.
 - pandas: CSV string preservation and Excel append integrity.
@@ -41,9 +41,9 @@ Selection favors a compact mix of data, document, numerical, media, CAD and secu
 
 ## Runtime contract
 
-Each task has a separate public `linux/amd64` image tagged `ghcr.io/akseljoonas/mimo-openenv-software:TASK_ID-v3`. Submission references use immutable digests. The image starts its OpenEnv server on port 8000 without mounted files, credentials or additional environment variables. In a WebSocket session at `/ws`, `reset` accepts `task_id`; `step` accepts `{"operation":"shell","command":"..."}` or `{"operation":"finish"}`. Standalone HTTP `/reset` and `/step` are stateless in the pinned OpenEnv release.
+Each task has a separate public `linux/amd64` image tagged `ghcr.io/akseljoonas/mimo-openenv-software:TASK_ID-v3b`. Submission references use immutable digests. The image starts its OpenEnv server on port 8000 without mounted files, credentials or additional environment variables. In a WebSocket session at `/ws`, `reset` accepts `task_id`; `step` accepts `{"operation":"shell","command":"..."}` or `{"operation":"finish"}`. Standalone HTTP `/reset` and `/step` are stateless in the pinned OpenEnv release.
 
-Reset restores the original workspace snapshot. Shell commands start in the task's original working directory, run as UID 2000, last at most 60 seconds and return at most 12,000 output bytes. `finish` invokes the original grader and returns `done: true`; reaching 64 actions also grades. A terminal session returns its cached verdict until reset. The server, original task record and snapshot are inaccessible to the agent user. This is not a security boundary against every possible reward exploit in arbitrary upstream repositories.
+Reset restores the original workspace snapshot. The build removes its temporary workspace after archiving it to avoid retaining a second prepared copy in the final image layer. Shell commands start in the task's original working directory, run as UID 2000, last at most 60 seconds and return at most 12,000 output bytes. `finish` invokes the original grader and returns `done: true`; reaching 64 actions also grades. A terminal session returns its cached verdict until reset. The server, original task record and snapshot are inaccessible to the agent user. This is not a security boundary against every possible reward exploit in arbitrary upstream repositories.
 
 Code tasks use Xiaomi's published `OpenSourceCodeEnvironment` unchanged. Its original test patch is installed for grading; runtime verifier commands and patch writes run as UID 2000. Build preparation uses Xiaomi's existing Git-history stripping routine and setup assertion before snapshotting. This removes reachable future fixes in some original images without rewriting the task or grader.
 
@@ -66,7 +66,7 @@ Install the pinned OpenEnv CLI. For a row in `tasks.jsonl`:
 
 ```sh
 export DOCKER_DEFAULT_PLATFORM=linux/amd64
-openenv build -t ghcr.io/akseljoonas/mimo-openenv-software:TASK_ID-v3 \
+openenv build -t ghcr.io/akseljoonas/mimo-openenv-software:TASK_ID-v3b \
   --build-arg TASK_ID=TASK_ID --build-arg TASK_IMAGE=SOURCE_IMAGE_DIGEST
 python verify.py IMAGE TASK_ID --dataset-type DATASET_TYPE \
   --solution solutions/TASK_ID.py --output evidence/TASK_ID.json
