@@ -5,12 +5,12 @@
   "baseline_request_sha256": "5445ddac73d5c7b09ca1f6071eb1a1a76de4df2e50b1e0b8256350257b88bac1",
   "adapter_revision": "a2ab08e869901476efc007bca071d77b24600dee",
   "baseline_dataset_revision": "4ce4fe143d71ca6365bd187e96efa15bd7ab2787",
-  "selection_policy": "Review baseline Trackio curves and completed private evaluation before choosing the next candidate. Run one accepted submission per rolling 24-hour slot. Keep all task records, image digests, action schema and original binary reward fixed. Record decisions and results; do not treat candidate order as an automatic ranking. Revise or skip candidates made uninformative by observed data. Prepare the next batch from measured outcomes.",
+  "selection_policy": "Qualitative selection only: infer likely task families from official graded domains, public benchmark packages, public organizer work and source-backed workflow similarities. Hand-pick one MiMo curriculum. Do not run ablations, calibration rollouts, pilot training, model trials or proxy evaluations. Preserve original task records and graders; allow only data/container/grader correctness validation. Do not probe or tune against Arena private evaluation. At most one accepted submission per rolling 24 hours. Keep automation paused.",
   "next_slot_utc": "2026-10-09T15:49:14.603503+00:00",
   "candidates": [
     {
       "id": "rollout-600",
-      "status": "prepared_not_submitted",
+      "status": "cancelled_by_user_no_ablations",
       "request": "experiments/batch-01/rollout-600.json",
       "request_sha256": "1c8d4a04cfc0f2d03f73a238e5d9f98bc7776155e80d4370488f008196122eaf",
       "factor": "rollout_wall_s",
@@ -18,11 +18,12 @@
       "task_count": 8,
       "hypothesis": "A shorter rollout limit may increase completed optimizer steps within four hours; reject as harmful if it mainly causes truncation or removes successful repairs.",
       "priority": "deprioritized_pending_full_baseline",
-      "priority_reason": "First seven completed groups reached selection in 59\u2013224 seconds, below both the 600-second candidate and 1200-second control limit. Reassess if later groups approach the limit."
+      "priority_reason": "First seven completed groups reached selection in 59\u2013224 seconds, below both the 600-second candidate and 1200-second control limit. Reassess if later groups approach the limit.",
+      "execution_scope": "archived_do_not_run"
     },
     {
       "id": "rollout-2400",
-      "status": "prepared_not_submitted",
+      "status": "cancelled_by_user_no_ablations",
       "request": "experiments/batch-01/rollout-2400.json",
       "request_sha256": "d73e16f649a9de523b220b2ae3fbec5c16546ffee170bc8b08fae927e8dda605",
       "factor": "rollout_wall_s",
@@ -30,21 +31,23 @@
       "task_count": 8,
       "hypothesis": "A longer rollout limit may recover successful repairs lost to the baseline wall limit; deprioritize if baseline episodes finish well below 1200 seconds.",
       "priority": "deprioritized_pending_full_baseline",
-      "priority_reason": "First seven completed groups reached selection in 59\u2013224 seconds, below both the 600-second candidate and 1200-second control limit. Reassess if later groups approach the limit."
+      "priority_reason": "First seven completed groups reached selection in 59\u2013224 seconds, below both the 600-second candidate and 1200-second control limit. Reassess if later groups approach the limit.",
+      "execution_scope": "archived_do_not_run"
     },
     {
       "id": "completion-16k",
-      "status": "prepared_not_submitted",
+      "status": "cancelled_by_user_no_ablations",
       "request": "experiments/batch-01/completion-16k.json",
       "request_sha256": "70c771ca8a3a753dc9f977791533e32cf303f9c5a8de59e8ee87b9bfaf33c921",
       "factor": "completion_tokens",
       "value": 16384,
       "task_count": 8,
-      "hypothesis": "A smaller completion-plus-observation budget may improve throughput; measure reward, clipping, optimizer steps and private scores together."
+      "hypothesis": "A smaller completion-plus-observation budget may improve throughput; measure reward, clipping, optimizer steps and private scores together.",
+      "execution_scope": "archived_do_not_run"
     },
     {
       "id": "python-only",
-      "status": "prepared_not_submitted",
+      "status": "cancelled_by_user_no_ablations",
       "request": "experiments/batch-01/python-only.json",
       "request_sha256": "fa1e6dd354f08e47257b90fd31a2de4dc9e377afa026637507056322295858cb",
       "factor": "subset",
@@ -56,11 +59,12 @@
         "002105"
       ],
       "task_count": 5,
-      "hypothesis": "Concentrating on the five Python repositories may produce a more consistent repair curriculum; exposure frequency and task mix change together."
+      "hypothesis": "Concentrating on the five Python repositories may produce a more consistent repair curriculum; exposure frequency and task mix change together.",
+      "execution_scope": "archived_do_not_run"
     },
     {
       "id": "javascript-only",
-      "status": "prepared_not_submitted",
+      "status": "cancelled_by_user_no_ablations",
       "request": "experiments/batch-01/javascript-only.json",
       "request_sha256": "af90de4429fb135d11cb9645df37b43bcc405d59ee142cbee329c8683af73dbc",
       "factor": "subset",
@@ -70,14 +74,17 @@
         "001547"
       ],
       "task_count": 3,
-      "hypothesis": "Concentrating on the three JavaScript repositories may produce more repeated useful repair updates; exposure frequency and task mix change together."
+      "hypothesis": "Concentrating on the three JavaScript repositories may produce more repeated useful repair updates; exposure frequency and task mix change together.",
+      "execution_scope": "archived_do_not_run"
     }
   ],
   "monitoring": {
     "automation_id": "mimo-arena-experiments",
     "interval_minutes": 15,
-    "status": "ACTIVE",
-    "initial_observation": "evidence/training-status.json"
+    "status": "PAUSED",
+    "initial_observation": "evidence/training-status.json",
+    "paused_at": "2026-10-08T16:49:21.561000+00:00",
+    "pause_reason": "User requested stopping the scheduled task; no automatic monitoring or submissions. Existing remote training is not cancelled."
   },
   "decisions": [
     {
@@ -91,6 +98,55 @@
       "decision": "Provisionally deprioritize both wall-time variants; no candidate selected or submitted. Continue baseline monitoring and wait for private evaluation.",
       "evidence": "experiments/observations/2026-10-08T161600Z.json",
       "limits": "Group event intervals include orchestration and do not reveal per-task reward, loss, tokens or termination reason. Trackio timed out; no success-rate, learning-signal or benchmark improvement claim."
+    },
+    {
+      "observed_at": "2026-10-08T17:11:51.667909+00:00",
+      "decision": "Pause the scheduled experiment task at user request. Preserve existing candidates and prepare a local 24-task curriculum from public benchmark evidence. Do not automatically resume or submit.",
+      "evidence": "experiments/curated-20261008/curriculum.json",
+      "limits": "Exact private questions and measured gains are unknown. Eight terminal tasks need a compatible grader integration; new code images require real validation."
+    },
+    {
+      "observed_at": "2026-10-09T10:17:43.826065+00:00",
+      "decision": "User correction: all ablations and selection happen offline; the Arena private test set is reserved for final evaluation. Prior suggestions of daily domain-specialist tuning using private scores are superseded.",
+      "limits": "One accepted submission per rolling 24 hours; no private-score feedback loop. The 45 percent target and 30 percent minimum remain unchanged."
+    },
+    {
+      "observed_at": "2026-10-09T10:23:57.876467+00:00",
+      "decision": "User clarified that no ablations can run at all. Cancel all variant runs and model evaluation plans, withdraw the separate compute prerequisite, and use qualitative reverse engineering of public task evidence to hand-pick one curriculum.",
+      "evidence": "experiments/qualitative-20261009/curriculum.json",
+      "limits": "Exact private questions and expected score remain unknown; 45 percent target and 30 percent minimum remain objectives."
+    },
+    {
+      "at": "2026-10-09T10:46:09.219533+00:00",
+      "decision": "Prelaunch audit: original smoke checks for all 24; local dependency repairs for OpenSCAD/Authlib; direct reference 0/1/0 verified on three terminal tasks; PYroMat OpenEnv 12 checks passed. Hold launch pending full integration. No model trials or new submission.",
+      "evidence": "experiments/prelaunch-20261009/assessment.json"
+    },
+    {
+      "observed_at": "2026-10-09T13:23:00Z",
+      "decision": "User authorized finalizing the strongest evidence-supported plan and launching one job. Select twelve original tasks with broad operations and repeated exposure; retain original graders and no model trials.",
+      "limits": "Quota, validation and immutable-public-image gates remain mandatory; no established score forecast."
     }
-  ]
+  ],
+  "curated_candidate": {
+    "manifest": "tasks.jsonl",
+    "status": "v3_final_validation",
+    "task_count": 12,
+    "code_core_count": 9,
+    "terminal_extension_count": 3,
+    "validation": "Full original positive/negative/reset checks in progress; publication and submission pending."
+  },
+  "pre_submission_objective": {
+    "target_percent": 45,
+    "minimum_percent": 30,
+    "target_solved_of_40": 18,
+    "minimum_solved_of_40": 12,
+    "status": "QUALITATIVE_SELECTION_NO_SCORE_ESTIMATE",
+    "protocol": "experiments/domain-evaluation-20261009/protocol.json",
+    "rule": "45 percent target and 30 percent minimum are objectives, not measured forecasts. Choose one curriculum through qualitative public-evidence analysis; no model ablations, pilot training or proxy evaluation. Require source/data integrity and runtime/grader correctness checks. Preserve the daily submission limit and paused schedule."
+  },
+  "launch_gate": {
+    "status": "HOLD",
+    "evidence": "experiments/prelaunch-20261009/assessment.json",
+    "rule": "Do not submit this selection until all final immutable OpenEnv images pass original positive/negative/reset, schema, resource and registry checks. Preserve original graders; do not mistake reward.txt=0 with exit=0 for success. Technical checks do not validate a 30% or 45% forecast."
+  }
 }

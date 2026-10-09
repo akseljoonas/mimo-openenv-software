@@ -9,7 +9,7 @@ USER root
 ARG TASK_ID
 LABEL org.opencontainers.image.source="https://github.com/akseljoonas/mimo-openenv-software"
 COPY --from=runtime /usr/local /opt/arena-python
-COPY server.py prepare.py /opt/arena/
+COPY server.py prepare.py terminal.py task-dependencies.json /opt/arena/
 COPY tasks/${TASK_ID}.json /opt/arena/instance.json
 RUN chmod 700 /opt/arena \
  && useradd --uid 2000 --create-home --home-dir /home/arena-agent arena-agent \

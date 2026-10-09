@@ -1,0 +1,4 @@
+{
+  "candidate-2500-hardware-cad": ["Arpeggio==2.0.3"],
+  "candidate-2376-security-cryptography": ["cryptography==46.0.3", "cffi==2.0.0", "pycparser==2.23"]
+}

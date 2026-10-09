@@ -16,7 +16,7 @@ jobs:
           python - <<'PY'
           import json, os
           rows = [json.loads(line) for line in open('tasks.jsonl')]
-          matrix = {'include': [{'task_id': r['task_id'], 'source_image': r['source_image']} for r in rows]}
+          matrix = {'include': [{'task_id': r['task_id'], 'source_image': r['source_image'], 'dataset_type': r['dataset_type']} for r in rows]}
           with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
               output.write('tasks=' + json.dumps(matrix) + '\n')
           PY
@@ -39,14 +39,13 @@ jobs:
           TASK_ID: ${{ matrix.task_id }}
           TASK_IMAGE: ${{ matrix.source_image }}
           DOCKER_DEFAULT_PLATFORM: linux/amd64
-        run: openenv build -t "ghcr.io/akseljoonas/mimo-openenv-software:${TASK_ID}-v2" --build-arg "TASK_ID=$TASK_ID" --build-arg "TASK_IMAGE=$TASK_IMAGE"
+        run: openenv build -t "ghcr.io/akseljoonas/mimo-openenv-software:${TASK_ID}-v3" --build-arg "TASK_ID=$TASK_ID" --build-arg "TASK_IMAGE=$TASK_IMAGE"
       - name: Replay real episodes
         env:
           TASK_ID: ${{ matrix.task_id }}
+          DATASET_TYPE: ${{ matrix.dataset_type }}
         run: |
-          solution=()
-          if [[ "$TASK_ID" == format-code-task-001661 ]]; then solution=(--solution solutions/friendship.py); fi
-          python verify.py "ghcr.io/akseljoonas/mimo-openenv-software:${TASK_ID}-v2" "$TASK_ID" "${solution[@]}" --output "evidence/${TASK_ID}.json"
+          python verify.py "ghcr.io/akseljoonas/mimo-openenv-software:${TASK_ID}-v3" "$TASK_ID" --dataset-type "$DATASET_TYPE" --solution "solutions/${TASK_ID}.py" --output "evidence/${TASK_ID}.json"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -60,4 +59,4 @@ jobs:
       - name: Publish verified image
         env:
           TASK_ID: ${{ matrix.task_id }}
-        run: docker push "ghcr.io/akseljoonas/mimo-openenv-software:${TASK_ID}-v2"
+        run: docker push "ghcr.io/akseljoonas/mimo-openenv-software:${TASK_ID}-v3"

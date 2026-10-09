@@ -1,4 +1,4 @@
-"""OpenEnv transport for the unmodified MiMo software-task verifier."""
+"""OpenEnv transport for original MiMo code and terminal task graders."""
 
 import json
 import os
@@ -16,6 +16,7 @@ from mimoagent.environments.datasets.opensource_code import OpenSourceCodeEnviro
 from mimoagent.environments.local import LocalEnvironment
 from openenv.core.env_server import Action, Environment, Observation, State, create_app
 from pydantic import Field
+from terminal import TerminalBenchVerifier
 
 
 ROOT = Path(__file__).resolve().parent
@@ -53,6 +54,15 @@ class VerifierExecution(LocalEnvironment):
                                  120, agent=not self.privileged, stdin=source)
         if result["returncode"] != 0:
             raise RuntimeError("Verifier file transfer failed")
+
+
+def make_verifier(*, privileged=False):
+    execution = VerifierExecution(cwd=str(WORKSPACE), privileged=privileged)
+    if INSTANCE["dataset_type"] == "opensource-code":
+        return OpenSourceCodeEnvironment(execution, INSTANCE)
+    if INSTANCE["dataset_type"] == "terminal_bench":
+        return TerminalBenchVerifier(execution, INSTANCE)
+    raise ValueError("Unsupported MiMo dataset type")
 
 
 def run_command(command, cwd, timeout, *, agent, stdin=None):
@@ -100,14 +110,14 @@ class MiMoEnvironment(Environment):
     def reset(self, seed=None, episode_id=None, task_id=None, **kwargs):
         if task_id not in (None, INSTANCE["instance_id"]):
             raise ValueError("This image does not contain that task_id")
-        if WORKSPACE not in (Path("/testbed"), Path("/workspace/repo")):
+        if WORKSPACE not in (Path("/testbed"), Path("/workspace/repo"), Path("/app")):
             raise RuntimeError("Unsupported workspace in pinned task")
         if WORKSPACE.exists():
             shutil.rmtree(WORKSPACE)
         with tarfile.open(ROOT / "workspace.tar") as archive:
             archive.extractall(WORKSPACE.parent, filter="fully_trusted")
         subprocess.run(["chown", "-R", f"{AGENT_UID}:{AGENT_UID}", str(WORKSPACE)], check=True)
-        self.verifier = OpenSourceCodeEnvironment(VerifierExecution(cwd=str(WORKSPACE)), INSTANCE)
+        self.verifier = make_verifier()
         self.verifier.setup_environment()
         self._state = State(episode_id=episode_id or str(uuid.uuid4()), step_count=0)
         self.terminal = None
