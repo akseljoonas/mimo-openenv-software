@@ -1,0 +1,50 @@
+{
+  "results": [
+    {
+      "task_id": "format-code-task-001457",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:239ef0403c4b1a80acb6f3e62ca2b719e03beb3b98b0a3b0a4e594d952d5124d",
+      "anonymous_pull": true,
+      "original_task_record_equal": true,
+      "published_episode_checks": 12,
+      "passed": true,
+      "peak_observed_writable_bytes": 179568640
+    },
+    {
+      "task_id": "format-code-task-000932",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:09e8e1ee42db0c7b02a9c68b4902c9bbae583c204e9df0480168273d8bb8998c",
+      "anonymous_pull": true,
+      "original_task_record_equal": true,
+      "published_episode_checks": 12,
+      "passed": true,
+      "peak_observed_writable_bytes": 41848832
+    },
+    {
+      "task_id": "format-code-task-000666",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:2031f3313b3a94474fcb8f9d0b2d416eb0bb86346dd32d8dbf177384c7a681c9",
+      "anonymous_pull": true,
+      "original_task_record_equal": true,
+      "published_episode_checks": 12,
+      "passed": true,
+      "peak_observed_writable_bytes": 7282688
+    },
+    {
+      "task_id": "format-code-task-001926",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:0b68bf274f65a72c13a7a6758138941aaa1b9f2fda488e05850bb466c1f9db17",
+      "anonymous_pull": true,
+      "original_task_record_equal": true,
+      "published_episode_checks": 12,
+      "passed": true,
+      "peak_observed_writable_bytes": 328921088
+    },
+    {
+      "task_id": "format-code-task-001886",
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:83520092a71495aec0501876e3366d9f66dcdb7d19b18fce768a329172a30bfe",
+      "anonymous_pull": true,
+      "original_task_record_equal": true,
+      "published_episode_checks": 12,
+      "passed": true,
+      "peak_observed_writable_bytes": 1445888
+    }
+  ],
+  "fixture_corrections": "The first fastavro positive validation attempt used the wrong workspace path. The fixture was corrected to the original /testbed path and the full sequence rerun successfully. No image or grader changes."
+}

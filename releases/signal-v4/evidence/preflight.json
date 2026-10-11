@@ -1,0 +1,25 @@
+{
+  "observed_at": "2026-10-11T13:50:10.933005+00:00",
+  "status": "validated_ready_to_submit",
+  "submitted": false,
+  "submission_id": "mimo-signal-v4-20261011",
+  "selection": "Five original tasks inferred to correspond to reward-bearing training ordinals in two completed runs; no private evaluation used for selection.",
+  "adapter_revisions": [
+    "a2ab08e869901476efc007bca071d77b24600dee",
+    "c72c7536d677a9b56282b584f023c003200f8338"
+  ],
+  "anonymous_pull_and_episode_replays_passed": 5,
+  "published_episode_checks_passed": 60,
+  "schema_identical_across_images": true,
+  "source_record_identity_matches": 5,
+  "model_trials": 0,
+  "new_images_built": 0,
+  "compressed_unique_bytes": 3580437648,
+  "largest_image_compressed_bytes": 911121444,
+  "peak_observed_writable_bytes": 328921088,
+  "submission_sha256": "b4b876a849e4d339d3fec1edb1e879d3d239257306c934c60bff724ab96c246b",
+  "limits": "Environment correctness and original record preservation validated. Ordinal-to-task mapping is inferred from submitted order; task-labelled trajectories unavailable. No forecast of benchmark performance.",
+  "dataset_revision": "a3093cf7d74ca474daf3abb82e301dfe514b947e",
+  "dataset_url": "https://huggingface.co/datasets/akseljoonas/mimo-openenv-signal-v4/tree/a3093cf7d74ca474daf3abb82e301dfe514b947e",
+  "public_dataset_files_verified": 21
+}
