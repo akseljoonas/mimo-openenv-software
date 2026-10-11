@@ -56,3 +56,5 @@ Validation results and image manifests are recorded under `evidence/`. The full 
 ## Arena launch
 
 `mimo-signal-v4-20261011` was accepted on 11 October 2026 and passed all 26 admission checks. Run [`bbb7a0a9dda9141d10f00d0b`](https://openenvarena-training.hf.space/?project=akseljoonas&runs=bbb7a0a9dda9141d10f00d0b) entered GPU model loading and then its first rollout. Its recorded training deadline is 2026-10-11 17:51:20 UTC, followed by private evaluation. No evaluated result is available at this publication. The frozen dataset revision is [`a3093cf`](https://huggingface.co/datasets/akseljoonas/mimo-openenv-signal-v4/tree/a3093cf7d74ca474daf3abb82e301dfe514b947e). See `evidence/arena-launch.json` for the observed state and request hash.
+
+The first logged optimizer update completed with reward mean 0.25, reward standard deviation 0.5, gradient norm 0.3349, no retries and no clipped completions. Its four selected episodes therefore include one success. This is one observed training group, not a measure of sustained learning or private-task performance. Exact public metrics are in `evidence/first-update.json`.
