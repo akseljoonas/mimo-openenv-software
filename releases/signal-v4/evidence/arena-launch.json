@@ -1,0 +1,26 @@
+{
+  "observed_at": "20261011T135432Z",
+  "submission_id": "mimo-signal-v4-20261011",
+  "state": "validated",
+  "admission_checks_passed": 26,
+  "admission_checks_total": 26,
+  "run_id": "bbb7a0a9dda9141d10f00d0b",
+  "run_state": "rolling",
+  "policy_version": 0,
+  "simulated": false,
+  "dashboard": "https://openenvarena-training.hf.space/?project=akseljoonas&runs=bbb7a0a9dda9141d10f00d0b",
+  "dataset": {
+    "repo": "akseljoonas/mimo-openenv-signal-v4",
+    "revision": "a3093cf7d74ca474daf3abb82e301dfe514b947e",
+    "url": "https://huggingface.co/datasets/akseljoonas/mimo-openenv-signal-v4/tree/a3093cf7d74ca474daf3abb82e301dfe514b947e"
+  },
+  "submission_sha256": "b4b876a849e4d339d3fec1edb1e879d3d239257306c934c60bff724ab96c246b",
+  "release_source_revision": "f48d308e9693f5d4430e3801c44ef44fa9753a3c",
+  "slot_ends_at_utc": "2026-10-12T13:50:45.674338+00:00",
+  "training_deadline_utc": "2026-10-11T17:51:20.420470+00:00",
+  "benchmark_result": null,
+  "notes": "Accepted once, all admission checks passed, and the real GPU run entered rollout. No completed private evaluation or benchmark improvement is established.",
+  "source_release_public": true,
+  "environment_checks_passed": 60,
+  "public_dataset_files_verified": 21
+}
