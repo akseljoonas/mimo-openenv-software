@@ -1,0 +1,62 @@
+{
+  "images": [
+    {
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:2a98ad8c3d9bb246d17de77d872b9e22cf4978b076100ca798edf90dd17bedad",
+      "anonymous_access": true,
+      "compressed_bytes": 573968793,
+      "layers": 10,
+      "platform": "linux/amd64",
+      "cmd": [
+        "/opt/arena-python/bin/python3",
+        "-m",
+        "uvicorn",
+        "workflow_server:app",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8000"
+      ],
+      "entrypoint": null,
+      "workdir": "/opt/arena"
+    },
+    {
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:2031f3313b3a94474fcb8f9d0b2d416eb0bb86346dd32d8dbf177384c7a681c9",
+      "anonymous_access": true,
+      "compressed_bytes": 573951843,
+      "layers": 6,
+      "platform": "linux/amd64",
+      "cmd": [
+        "/opt/arena-python/bin/python3",
+        "-m",
+        "uvicorn",
+        "server:app",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8000"
+      ],
+      "entrypoint": null,
+      "workdir": "/opt/arena"
+    },
+    {
+      "image": "ghcr.io/akseljoonas/mimo-openenv-software@sha256:0b68bf274f65a72c13a7a6758138941aaa1b9f2fda488e05850bb466c1f9db17",
+      "anonymous_access": true,
+      "compressed_bytes": 911121444,
+      "layers": 6,
+      "platform": "linux/amd64",
+      "cmd": [
+        "/opt/arena-python/bin/python3",
+        "-m",
+        "uvicorn",
+        "server:app",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8000"
+      ],
+      "entrypoint": null,
+      "workdir": "/opt/arena"
+    }
+  ],
+  "shared_layer_total_bytes": 1485090141
+}
