@@ -1,11 +1,18 @@
 name: Publish images
 on:
   workflow_dispatch:
+    inputs:
+      release:
+        description: Release to build (original or workspace-v5)
+        default: original
+        type: choice
+        options: [original, workspace-v5]
 permissions:
   contents: read
   packages: write
 jobs:
   matrix:
+    if: inputs.release != 'workspace-v5'
     runs-on: ubuntu-latest
     outputs:
       tasks: ${{ steps.tasks.outputs.tasks }}
@@ -60,3 +67,29 @@ jobs:
         env:
           TASK_ID: ${{ matrix.task_id }}
         run: docker push "ghcr.io/akseljoonas/mimo-openenv-software:${TASK_ID}-v3c"
+  workspace-v5:
+    if: inputs.release == 'workspace-v5'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned validation client
+        run: pip install 'openenv @ git+https://github.com/meta-pytorch/OpenEnv.git@86a180ede21e044f7929b9a7783ad83aa67d83a3' requests websockets
+      - name: Build fixed workflow image
+        run: docker build --platform linux/amd64 --build-arg SOURCE_REVISION="$GITHUB_SHA" -t ghcr.io/akseljoonas/mimo-openenv-software:workspace-v5-${{ github.sha }} releases/workspace-v5
+      - name: Verify actual OpenEnv episodes
+        run: python releases/workspace-v5/verify_workflows.py ghcr.io/akseljoonas/mimo-openenv-software:workspace-v5-${{ github.sha }} --output evidence/workspace-v5.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workspace-v5-validation
+          path: evidence/workspace-v5.json
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish verified workflow image
+        run: docker push ghcr.io/akseljoonas/mimo-openenv-software:workspace-v5-${{ github.sha }}

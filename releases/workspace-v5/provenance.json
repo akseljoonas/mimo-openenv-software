@@ -1,0 +1,9 @@
+{
+  "upstream_repository": "https://github.com/ruvnet/metaharness",
+  "upstream_revision": "4657e5b82e124917b01d79ee5e9de41badb48fda",
+  "upstream_path": "integrations/openenv-arena/arena_env/tasks.py",
+  "sha256": "94e29b6d884302f57e9440591cca5c07350cc4eb47d9e4e9f7a27689c519b781",
+  "license": "MIT; vendor/LICENSE",
+  "modifications": "None to vendor/tasks.py; new file-based transport in workflow_server.py",
+  "case_selection": "8 families x difficulties 1 and 2 x predeclared seeds 101 and 307; no model calibration or benchmark-query selection"
+}

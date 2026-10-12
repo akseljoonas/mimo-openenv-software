@@ -1,0 +1,9 @@
+*
+!Dockerfile
+!workflow_server.py
+!cases.json
+!vendor
+!vendor/tasks.py
+!vendor/LICENSE
+**/__pycache__
+**/*.pyc
