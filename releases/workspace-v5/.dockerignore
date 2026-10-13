@@ -1,9 +1,6 @@
 *
 !Dockerfile
-!workflow_server.py
-!cases.json
-!vendor
-!vendor/tasks.py
-!vendor/LICENSE
-**/__pycache__
-**/*.pyc
+!runtime_server.py
+!bundles.json
+!LICENSE
+!requirements.txt

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "repository": "https://github.com/hamishivi/tmax",
+    "revision": "6d3d606c0f9de6ceec9481f9ccc793936818fef0",
+    "source_url": "https://github.com/hamishivi/tmax/tree/6d3d606c0f9de6ceec9481f9ccc793936818fef0",
+    "adaptation": "Task generation permits installed artifact libraries and constrains graders to parsing submitted artifacts."
+  },
+  "generation_model": {
+    "repository": "Qwen/Qwen3.8-27B",
+    "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+    "source_url": "https://huggingface.co/Qwen/Qwen3.8-27B/tree/1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0"
+  },
+  "fixtures": {
+    "origin": "Original fictional records and synthetic assets generated for these tasks.",
+    "review": "Task instructions, source fixtures and independent grader calculations were reviewed and repaired for consistency.",
+    "source_assets_from_evaluation_benchmarks": false
+  },
+  "release_contents": {
+    "reference_solution_scripts": false,
+    "model_transcripts": false,
+    "benchmark_performance_claims": false
+  },
+  "runtime": {
+    "base_image": "python:3.12-slim-bookworm@sha256:34386ef0cb081344d7ec1c103ba398e6e9f64e9ab3a1509accc92a4e24a07258",
+    "openenv_repository": "https://github.com/meta-pytorch/OpenEnv",
+    "openenv_revision": "86a180ede21e044f7929b9a7783ad83aa67d83a3",
+    "requirements_file": "requirements.txt",
+    "requirements_sha256": "5efe6513add0bdb17bc4956680f99cd70bd89034506f229dd5a386a2ab2f0c08",
+    "pinned_dependency_lines": 116
+  },
+  "selection_manifest": "release_manifest.json"
+}
